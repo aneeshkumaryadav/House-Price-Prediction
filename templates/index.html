@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}HousePriceAI — Smarter House Price Predictions{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container position-relative py-5">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 reveal">
+        <div class="hero-eyebrow mb-3">Property valuation, modeled</div>
+        <h1 class="hero-title">Accurate house price predictions for smarter decisions.</h1>
+        <p class="hero-subtitle mt-3">
+          Upload property details or enter features to get instant price estimates powered by a trained ML model.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+          <a href="{{ url_for('predict') }}" class="btn btn-brand btn-lg px-4 hover-lift">
+            Try the Predictor
+          </a>
+          <a href="{{ url_for('dataset') }}" class="btn btn-outline-light btn-lg px-4 hover-lift">
+            View Dataset &amp; Model
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end reveal">
+        <svg class="hero-blueprint-figure" viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line drawing of a house floor plan with an estimated price">
+          <path class="blueprint-path" data-draw d="M60 190 L240 90 L420 190" />
+          <path class="blueprint-path" data-draw d="M90 190 L90 320 L390 320 L390 190" />
+          <path class="blueprint-path" data-draw d="M240 190 L240 320" />
+          <path class="blueprint-path" data-draw d="M215 320 L215 250 L265 250 L265 320" />
+          <path class="blueprint-path" data-draw d="M120 230 L160 230 L160 260 L120 260 Z" />
+          <path class="blueprint-path" data-draw d="M320 230 L360 230 L360 260 L320 260 Z" />
+          <path class="blueprint-path" data-draw d="M340 130 L340 90 L365 90 L365 145" />
+          <line class="blueprint-path blueprint-dim" data-draw x1="90" y1="345" x2="390" y2="345" />
+          <line class="blueprint-path blueprint-dim" x1="90" y1="338" x2="90" y2="352" />
+          <line class="blueprint-path blueprint-dim" x1="390" y1="338" x2="390" y2="352" />
+          <text x="220" y="368" class="blueprint-label">42' SPAN</text>
+          <text x="415" y="195" class="blueprint-label">INDORE, MP</text>
+          <text id="tickerValue" x="90" y="60" class="hero-price-tag">&#8377;0</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-4 border-top border-light border-opacity-10 reveal">
+      <div class="col-12 d-flex flex-wrap gap-4 gap-md-5">
+        <div>
+          <div class="hero-stat-value">{{ "{:,}".format(stats.rows) }}</div>
+          <div class="hero-stat-label">properties in training data</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">{{ stats.localities }} localities</div>
+          <div class="hero-stat-label">across Indore</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">&#8377;{{ stats.price_min|inr }} &ndash; &#8377;{{ stats.price_max|inr }}</div>
+          <div class="hero-stat-label">observed price range</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 feature-row">
+  <div class="container py-4">
+    <div class="row g-4">
+      <div class="col-md-4 reveal">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h3 class="feature-title mb-2">Fast predictions</h3>
+          <p class="text-muted small mb-0">Get a price estimate in milliseconds — no forms to wait on, no back-office quote.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-bar-chart-line-fill"></i></div>
+          <h3 class="feature-title mb-2">Explainable features</h3>
+          <p class="text-muted small mb-0">Every estimate ships with the features that moved it — no black box.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bi bi-file-earmark-arrow-down-fill"></i></div>
+          <h3 class="feature-title mb-2">Export results (CSV)</h3>
+          <p class="text-muted small mb-0">Download predictions for your records, a client report, or further analysis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 reveal">
+        <span class="hero-eyebrow" style="color: var(--verdigris);">About the project</span>
+        <p class="ledger-quote fs-5 mt-3" style="font-family: var(--font-display); font-weight: 500; color: var(--ink);">
+          HousePriceAI reads a property's vitals — area, rooms, parking, furnishing, and
+          locality — and returns a defensible number in seconds, the same way an appraiser
+          would, minus the wait.
+        </p>
+        <p class="text-muted mt-3">
+          It's a regression model trained on {{ "{:,}".format(stats.rows) }} real Indore-area
+          listings, wrapped in a small web app: enter a few details or upload your own
+          spreadsheet, and get prices with a confidence range and the features that drove
+          them. Built as an end-to-end demo of a real ML product — data, model, and interface.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  window.HERO_TICKER_TARGET = {{ stats.price_mean }};
+</script>
+{% endblock %}
