@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block title %}Predict Price — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="predict-section py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="predict-tabs mb-4 reveal is-visible" role="tablist">
+          <button class="predict-tab active" data-tab="single" role="tab" aria-selected="true" aria-controls="tabSingle" id="tabBtnSingle">
+            <i class="bi bi-clipboard-data me-2"></i>Single property
+          </button>
+          <button class="predict-tab" data-tab="batch" role="tab" aria-selected="false" aria-controls="tabBatch" id="tabBtnBatch">
+            <i class="bi bi-upload me-2"></i>Upload your dataset
+          </button>
+        </div>
+
+        <!-- ================= SINGLE PREDICTION ================= -->
+        <div id="tabSingle" class="tab-pane-custom" role="tabpanel" aria-labelledby="tabBtnSingle">
+          <div class="card elevated border-0 p-4 p-md-5 mb-4 reveal is-visible">
+            <div class="form-eyebrow mb-2">Property survey</div>
+            <h1 class="h4 fw-bold mb-1" style="font-family: var(--font-display);">Predict house price</h1>
+            <p class="text-muted small mb-4">Fields mirror the columns the model was trained on — area through locality.</p>
+
+            <form method="POST" action="{{ url_for('predict') }}" id="predictForm" novalidate>
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() if csrf_token else '' }}">
+
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <label for="area" class="form-label">Area (sq. ft.)</label>
+                  <input type="number" class="form-control" id="area" name="area" min="100" required
+                         value="{{ request.form.area if request.form else '' }}">
+                </div>
+                <div class="col-sm-6">
+                  <label for="location" class="form-label">Locality</label>
+                  <select class="form-select" id="location" name="location" required>
+                    <option value="" disabled {{ 'selected' if not (request.form and request.form.location) }}>Select locality</option>
+                    {% for loc in locations %}
+                    <option value="{{ loc }}" {{ 'selected' if request.form and request.form.location == loc }}>{{ loc }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label for="bedrooms" class="form-label">Bedrooms</label>
+                  <input type="number" class="form-control" id="bedrooms" name="bedrooms" min="1" required
+                         value="{{ request.form.bedrooms if request.form else '' }}">
+                </div>
+                <div class="col-sm-4">
+                  <label for="bathrooms" class="form-label">Bathrooms</label>
+                  <input type="number" class="form-control" id="bathrooms" name="bathrooms" min="1" required
+                         value="{{ request.form.bathrooms if request.form else '' }}">
+                </div>
+                <div class="col-sm-4">
+                  <label for="stories" class="form-label">Stories</label>
+                  <input type="number" class="form-control" id="stories" name="stories" min="1" max="4" required
+                         value="{{ request.form.stories if request.form else '' }}">
+                </div>
+                <div class="col-sm-6">
+                  <label for="parking" class="form-label">Parking spots</label>
+                  <input type="number" class="form-control" id="parking" name="parking" min="0" max="4" required
+                         value="{{ request.form.parking if request.form else '' }}">
+                </div>
+                <div class="col-sm-6">
+                  <label for="furnishingstatus" class="form-label">Furnishing</label>
+                  <select class="form-select" id="furnishingstatus" name="furnishingstatus" required>
+                    <option value="" disabled {{ 'selected' if not (request.form and request.form.furnishingstatus) }}>Select furnishing</option>
+                    {% for f in furnishing %}
+                    <option value="{{ f }}" {{ 'selected' if request.form and request.form.furnishingstatus == f }}>{{ f|capitalize }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-sm-6">
+                  <span class="form-label d-block">On main road</span>
+                  <div class="toggle-pair" role="radiogroup" aria-label="On main road">
+                    <input type="radio" name="mainroad" id="mainroadYes" value="yes" class="toggle-input" {{ 'checked' if not request.form or request.form.mainroad == 'yes' }}>
+                    <label for="mainroadYes" class="toggle-pill">Yes</label>
+                    <input type="radio" name="mainroad" id="mainroadNo" value="no" class="toggle-input" {{ 'checked' if request.form and request.form.mainroad == 'no' }}>
+                    <label for="mainroadNo" class="toggle-pill">No</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <span class="form-label d-block">Near market</span>
+                  <div class="toggle-pair" role="radiogroup" aria-label="Near market">
+                    <input type="radio" name="near_market" id="marketYes" value="yes" class="toggle-input" {{ 'checked' if not request.form or request.form.near_market == 'yes' }}>
+                    <label for="marketYes" class="toggle-pill">Yes</label>
+                    <input type="radio" name="near_market" id="marketNo" value="no" class="toggle-input" {{ 'checked' if request.form and request.form.near_market == 'no' }}>
+                    <label for="marketNo" class="toggle-pill">No</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center gap-2 mt-5">
+                <button type="submit" class="btn btn-brand px-4 hover-lift">Predict price</button>
+                <button type="button" class="btn btn-outline-secondary px-4" id="autofillBtn">Example input</button>
+                <a href="{{ url_for('static', filename='data/sample_data.csv') }}" class="btn btn-link ms-auto text-decoration-none" download>
+                  <i class="bi bi-download me-1"></i>Sample dataset
+                </a>
+              </div>
+            </form>
+          </div>
+
+          {% if prediction is defined and prediction %}
+          <div class="card result-card border-0 p-4 p-md-5 reveal is-visible">
+            <div class="result-eyebrow mb-2"><i class="bi bi-check-circle-fill me-1"></i>Prediction result</div>
+            <div class="predicted-price mb-1">&#8377;{{ prediction.price|inr }}</div>
+            <p class="small mb-0" style="color: rgba(255,255,255,0.6);">&#8776; &#8377;{{ prediction.price|lakh_crore }} &middot; estimated market value</p>
+
+            <div class="confidence-ruler"
+                 data-low="{{ prediction.low }}" data-high="{{ prediction.high }}" data-price="{{ prediction.price }}">
+              <div class="track"></div>
+            </div>
+            <div class="d-flex justify-content-between small" style="color: rgba(255,255,255,0.55);">
+              <span class="text-mono">&#8377;{{ prediction.low|inr }}</span>
+              <span>{{ prediction.confidence }}% confidence interval</span>
+              <span class="text-mono">&#8377;{{ prediction.high|inr }}</span>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.12); margin: 1.75rem 0 1.25rem;">
+
+            <h2 class="result-eyebrow mb-3" style="font-size:.74rem;">Top contributing features</h2>
+            {% for feature in prediction.top_features %}
+            <div class="feature-bar-row">
+              <div class="d-flex justify-content-between small">
+                <span>{{ feature.name }}</span>
+                <span class="text-mono" style="color: var(--brass);">{{ feature.impact }}</span>
+              </div>
+              <div class="feature-bar-track">
+                <div class="feature-bar-fill" style="width: {{ feature.weight }}%;"></div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- ================= BATCH UPLOAD ================= -->
+        <div id="tabBatch" class="tab-pane-custom d-none" role="tabpanel" aria-labelledby="tabBtnBatch">
+          <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+            <div class="form-eyebrow mb-2">Bring your own data</div>
+            <h1 class="h4 fw-bold mb-1" style="font-family: var(--font-display);">Upload a dataset</h1>
+            <p class="text-muted small mb-4">
+              CSV or Excel, one row per property. Required columns:
+              <code class="text-mono small">area, bedrooms, bathrooms, stories, parking, mainroad, furnishingstatus, location</code>
+              &mdash; <code class="text-mono small">near_market</code> is optional.
+            </p>
+
+            <form method="POST" action="{{ url_for('predict_batch') }}" enctype="multipart/form-data" id="batchForm">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() if csrf_token else '' }}">
+
+              <label for="dataset_file" class="dropzone" id="dropzone">
+                <i class="bi bi-cloud-arrow-up fs-2 mb-2"></i>
+                <span class="dropzone-title">Drop your CSV or Excel file here</span>
+                <span class="dropzone-sub">or click to browse &middot; up to 8&nbsp;MB</span>
+                <span class="dropzone-filename" id="dropzoneFilename"></span>
+                <input type="file" id="dataset_file" name="dataset_file" accept=".csv,.xlsx,.xls" class="visually-hidden" required>
+              </label>
+
+              <div class="d-flex flex-wrap align-items-center gap-2 mt-4">
+                <button type="submit" class="btn btn-brand px-4 hover-lift">Run predictions</button>
+                <a href="{{ url_for('static', filename='data/sample_data.csv') }}" class="btn btn-link ms-auto text-decoration-none" download>
+                  <i class="bi bi-download me-1"></i>Download example format
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.getElementById('autofillBtn').addEventListener('click', function () {
+  document.getElementById('area').value = 3200;
+  document.getElementById('bedrooms').value = 3;
+  document.getElementById('bathrooms').value = 2;
+  document.getElementById('stories').value = 2;
+  document.getElementById('parking').value = 1;
+  document.getElementById('location').value = 'Palasia';
+  document.getElementById('furnishingstatus').value = 'semi-furnished';
+  document.getElementById('mainroadYes').checked = true;
+  document.getElementById('marketYes').checked = true;
+});
+
+/* Tabs */
+var tabBtns = document.querySelectorAll('.predict-tab');
+tabBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    tabBtns.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    document.getElementById('tabSingle').classList.toggle('d-none', btn.dataset.tab !== 'single');
+    document.getElementById('tabBatch').classList.toggle('d-none', btn.dataset.tab !== 'batch');
+  });
+});
+
+/* Dropzone */
+var dropzone = document.getElementById('dropzone');
+var fileInput = document.getElementById('dataset_file');
+var filenameEl = document.getElementById('dropzoneFilename');
+function showFilename() {
+  if (fileInput.files.length) {
+    filenameEl.textContent = fileInput.files[0].name;
+    dropzone.classList.add('has-file');
+  }
+}
+fileInput.addEventListener('change', showFilename);
+['dragover', 'dragenter'].forEach(function (evt) {
+  dropzone.addEventListener(evt, function (e) { e.preventDefault(); dropzone.classList.add('dragging'); });
+});
+['dragleave', 'drop'].forEach(function (evt) {
+  dropzone.addEventListener(evt, function (e) { e.preventDefault(); dropzone.classList.remove('dragging'); });
+});
+dropzone.addEventListener('drop', function (e) {
+  if (e.dataTransfer.files.length) { fileInput.files = e.dataTransfer.files; showFilename(); }
+});
+</script>
+{% endblock %}
