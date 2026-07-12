@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Admin Data-Update Log — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <a href="{{ url_for('admin_dashboard') }}" class="footer-link small d-inline-block mb-3" style="color: var(--verdigris);">
+          <i class="bi bi-arrow-left me-1"></i>Back to dashboard
+        </a>
+
+        <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+          <div class="form-eyebrow mb-1">Report</div>
+          <h1 class="h4 fw-bold mb-4" style="font-family: var(--font-display);">Admin data-update log</h1>
+
+          <div class="table-responsive">
+            <table class="table ledger-table align-middle mb-0">
+              <thead><tr><th>When (UTC)</th><th>Admin</th><th>Action</th><th>Details</th></tr></thead>
+              <tbody>
+                {% for e in entries %}
+                <tr>
+                  <td class="text-mono">{{ e['created_at'] }}</td>
+                  <td>{{ e['admin_username'] }}</td>
+                  <td>{{ e['action'] }}</td>
+                  <td class="text-muted">{{ e['details'] }}</td>
+                </tr>
+                {% else %}
+                <tr><td colspan="4" class="text-muted text-center py-4">No admin actions logged yet.</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
