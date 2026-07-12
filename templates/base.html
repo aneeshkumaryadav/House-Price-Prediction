@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}HousePriceAI{% endblock %}</title>
+<meta name="description" content="Accurate house price predictions powered by machine learning.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url_for('index') }}">
+      <svg class="brand-mark" width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="15" cy="15" r="14" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M8 16.5L15 10l7 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 15v6h11v-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 21v-4h4v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">House<span class="brand-accent">Price</span>AI</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}"><span>Home</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('predict') }}"><span>Predict</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('dataset') }}"><span>Dataset</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#about"><span>About</span></a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-brand btn-sm px-3" href="{{ url_for('predict') }}">Try Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="container pt-5 mt-3">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+{% block content %}{% endblock %}
+</main>
+
+<footer class="footer-dark">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <svg width="26" height="26" viewBox="0 0 30 30" fill="none" aria-hidden="true" class="text-brass">
+            <circle cx="15" cy="15" r="14" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M8 16.5L15 10l7 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 15v6h11v-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="footer-brand">House<span class="text-brass">Price</span>AI</span>
+        </div>
+        <p class="footer-copy small mb-0">
+          A machine-learning estimator that reads a property's vitals &mdash; area, rooms,
+          parking, furnishing, and locality &mdash; and returns a defensible price in
+          seconds. Built for buyers, sellers, and analysts across Indore who'd rather see
+          the numbers than guess.
+        </p>
+      </div>
+      <div class="col-6 col-md-2">
+        <span class="footer-eyebrow">Navigate</span>
+        <ul class="list-unstyled small mt-3">
+          <li class="mb-2"><a href="{{ url_for('index') }}" class="footer-link">Home</a></li>
+          <li class="mb-2"><a href="{{ url_for('predict') }}" class="footer-link">Predict</a></li>
+          <li class="mb-2"><a href="{{ url_for('dataset') }}" class="footer-link">Dataset</a></li>
+          <li class="mb-2"><a href="https://github.com/aneeshkumaryadav/House-Price-Prediction" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3">
+        <span class="footer-eyebrow">Legal</span>
+        <ul class="list-unstyled small mt-3">
+          <li class="mb-2"><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <span class="footer-eyebrow">Contact</span>
+        <div class="d-flex gap-3 mt-3 fs-5">
+          <a href="https://github.com/aneeshkumaryadav" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-rule my-4"></div>
+    <div class="d-flex flex-column flex-md-row justify-content-between small footer-copy gap-2">
+      <span>&copy; <span id="year"></span> HousePriceAI. All rights reserved.</span>
+      <span>Built with Flask &amp; scikit-learn</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>
