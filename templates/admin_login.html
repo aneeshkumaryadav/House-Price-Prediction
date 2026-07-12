@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Admin Sign In — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+          <div class="form-eyebrow mb-2">Admin</div>
+          <h1 class="h4 fw-bold mb-1" style="font-family: var(--font-display);">Sign in</h1>
+          <p class="text-muted small mb-4">Manage the training dataset, retrain the model, and view reports.</p>
+
+          <form method="POST" action="{{ url_for('admin_login') }}" novalidate>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() if csrf_token else '' }}">
+            <div class="mb-4">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" name="username" required autofocus>
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-brand w-100 px-4 hover-lift">Sign in</button>
+          </form>
+
+          <p class="text-muted small mt-4 mb-0">
+            Demo credentials: <span class="text-mono">admin</span> / <span class="text-mono">ChangeMe123</span>
+            &mdash; change these in <code class="text-mono small">init_db()</code> before deploying.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
