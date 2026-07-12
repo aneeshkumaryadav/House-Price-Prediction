@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Model Performance — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <a href="{{ url_for('admin_dashboard') }}" class="footer-link small d-inline-block mb-3" style="color: var(--verdigris);">
+          <i class="bi bi-arrow-left me-1"></i>Back to dashboard
+        </a>
+
+        <div class="card result-card border-0 p-4 p-md-5 mb-4 reveal is-visible">
+          <div class="result-eyebrow mb-2"><i class="bi bi-bar-chart-line-fill me-1"></i>Model performance report</div>
+          <p class="small mb-4" style="color: rgba(255,255,255,0.6);">Evaluated against {{ metrics.count }} records currently in the dataset.</p>
+          <div class="row g-4">
+            <div class="col-sm-3">
+              <div class="result-eyebrow" style="font-size:.7rem;">MAE</div>
+              <div class="text-mono fs-5 mt-1" style="color:#fff;">&#8377;{{ metrics.mae|inr }}</div>
+            </div>
+            <div class="col-sm-3">
+              <div class="result-eyebrow" style="font-size:.7rem;">RMSE</div>
+              <div class="text-mono fs-5 mt-1" style="color:#fff;">&#8377;{{ metrics.rmse|inr }}</div>
+            </div>
+            <div class="col-sm-3">
+              <div class="result-eyebrow" style="font-size:.7rem;">MAPE</div>
+              <div class="text-mono fs-5 mt-1" style="color:#fff;">{{ "%.1f"|format(metrics.mape) }}%</div>
+            </div>
+            <div class="col-sm-3">
+              <div class="result-eyebrow" style="font-size:.7rem;">R&sup2;</div>
+              <div class="text-mono fs-5 mt-1" style="color:#fff;">{{ "%.3f"|format(metrics.r2) }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+          <div class="form-eyebrow mb-3">Largest prediction errors &middot; top {{ rows|length }}</div>
+          <div class="table-responsive">
+            <table class="table ledger-table align-middle mb-0">
+              <thead>
+                <tr><th>ID</th><th>Locality</th><th>Actual</th><th>Predicted</th><th>Error</th></tr>
+              </thead>
+              <tbody>
+                {% for r in rows %}
+                <tr>
+                  <td class="text-mono">{{ r.id }}</td>
+                  <td>{{ r.location }}</td>
+                  <td class="text-mono">&#8377;{{ r.actual|inr }}</td>
+                  <td class="text-mono">&#8377;{{ r.predicted|inr }}</td>
+                  <td class="text-mono" style="color: {{ 'var(--verdigris)' if r.error >= 0 else '#b3452f' }};">
+                    {{ '+' if r.error >= 0 else '' }}&#8377;{{ r.error|inr }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
