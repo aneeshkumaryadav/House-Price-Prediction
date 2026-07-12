@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit' if mode == 'edit' else 'Add' }} Property — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+          <div class="form-eyebrow mb-2">Admin</div>
+          <h1 class="h4 fw-bold mb-4" style="font-family: var(--font-display);">
+            {{ 'Edit property #' ~ house_id if mode == 'edit' else 'Add property' }}
+          </h1>
+
+          <form method="POST" novalidate>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() if csrf_token else '' }}">
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <label for="area" class="form-label">Area (sq. ft.)</label>
+                <input type="number" class="form-control" id="area" name="area" min="100" required
+                       value="{{ house['area'] if house else '' }}">
+              </div>
+              <div class="col-sm-6">
+                <label for="location" class="form-label">Locality</label>
+                <select class="form-select" id="location" name="location" required>
+                  <option value="" disabled {{ 'selected' if not house }}>Select locality</option>
+                  {% for loc in locations %}
+                  <option value="{{ loc }}" {{ 'selected' if house and house['location'] == loc }}>{{ loc }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <label for="bedrooms" class="form-label">Bedrooms</label>
+                <input type="number" class="form-control" id="bedrooms" name="bedrooms" min="1" required
+                       value="{{ house['bedrooms'] if house else '' }}">
+              </div>
+              <div class="col-sm-4">
+                <label for="bathrooms" class="form-label">Bathrooms</label>
+                <input type="number" class="form-control" id="bathrooms" name="bathrooms" min="1" required
+                       value="{{ house['bathrooms'] if house else '' }}">
+              </div>
+              <div class="col-sm-4">
+                <label for="stories" class="form-label">Stories</label>
+                <input type="number" class="form-control" id="stories" name="stories" min="1" max="4" required
+                       value="{{ house['stories'] if house else '' }}">
+              </div>
+              <div class="col-sm-6">
+                <label for="parking" class="form-label">Parking spots</label>
+                <input type="number" class="form-control" id="parking" name="parking" min="0" max="4" required
+                       value="{{ house['parking'] if house else '' }}">
+              </div>
+              <div class="col-sm-6">
+                <label for="furnishingstatus" class="form-label">Furnishing</label>
+                <select class="form-select" id="furnishingstatus" name="furnishingstatus" required>
+                  <option value="" disabled {{ 'selected' if not house }}>Select furnishing</option>
+                  {% for f in furnishing %}
+                  <option value="{{ f }}" {{ 'selected' if house and house['furnishingstatus'] == f }}>{{ f|capitalize }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <span class="form-label d-block">On main road</span>
+                <div class="toggle-pair" role="radiogroup" aria-label="On main road">
+                  <input type="radio" name="mainroad" id="mainroadYes" value="yes" class="toggle-input" {{ 'checked' if not house or house['mainroad'] == 'yes' }}>
+                  <label for="mainroadYes" class="toggle-pill">Yes</label>
+                  <input type="radio" name="mainroad" id="mainroadNo" value="no" class="toggle-input" {{ 'checked' if house and house['mainroad'] == 'no' }}>
+                  <label for="mainroadNo" class="toggle-pill">No</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <span class="form-label d-block">Near market</span>
+                <div class="toggle-pair" role="radiogroup" aria-label="Near market">
+                  <input type="radio" name="near_market" id="marketYes" value="yes" class="toggle-input" {{ 'checked' if not house or house['near_market'] == 'yes' }}>
+                  <label for="marketYes" class="toggle-pill">Yes</label>
+                  <input type="radio" name="near_market" id="marketNo" value="no" class="toggle-input" {{ 'checked' if house and house['near_market'] == 'no' }}>
+                  <label for="marketNo" class="toggle-pill">No</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="price" class="form-label">Price (&#8377;)</label>
+                <input type="number" class="form-control" id="price" name="price" min="0" required
+                       value="{{ house['price'] if house else '' }}">
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-5">
+              <button type="submit" class="btn btn-brand px-4 hover-lift">
+                {{ 'Save changes' if mode == 'edit' else 'Add property' }}
+              </button>
+              <a href="{{ url_for('admin_dashboard') }}" class="btn btn-outline-secondary px-4">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}``
