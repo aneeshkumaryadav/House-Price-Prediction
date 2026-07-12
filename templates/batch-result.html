@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Batch Results — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <div class="card result-card border-0 p-4 p-md-5 mb-4 reveal is-visible">
+          <div class="result-eyebrow mb-2"><i class="bi bi-check-circle-fill me-1"></i>Batch prediction complete</div>
+          <h1 class="h4 fw-bold mb-1" style="font-family: var(--font-display); color:#fff;">{{ filename }}</h1>
+          <p class="small mb-4" style="color: rgba(255,255,255,0.6);">{{ summary.rows }} properties scored</p>
+
+          <div class="row g-4">
+            <div class="col-sm-4">
+              <div class="result-eyebrow" style="font-size:.7rem;">Average estimate</div>
+              <div class="text-mono fs-4 mt-1" style="color:#fff;">&#8377;{{ summary.avg_price|inr }}</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="result-eyebrow" style="font-size:.7rem;">Lowest</div>
+              <div class="text-mono fs-4 mt-1" style="color:#fff;">&#8377;{{ summary.min_price|inr }}</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="result-eyebrow" style="font-size:.7rem;">Highest</div>
+              <div class="text-mono fs-4 mt-1" style="color:#fff;">&#8377;{{ summary.max_price|inr }}</div>
+            </div>
+          </div>
+
+          <a href="{{ url_for('download_result', result_id=download_id) }}" class="btn btn-brand px-4 mt-4 hover-lift">
+            <i class="bi bi-download me-1"></i>Download full results (CSV)
+          </a>
+        </div>
+
+        <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+          <div class="form-eyebrow mb-3">Preview &middot; first {{ preview|length }} rows</div>
+          <div class="table-responsive">
+            <table class="table ledger-table align-middle mb-0">
+              <thead>
+                <tr>
+                  {% for col in columns %}
+                  <th>{{ col }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in preview %}
+                <tr>
+                  {% for col in columns %}
+                  <td class="{{ 'text-mono' if col == 'predicted_price' else '' }}">
+                    {% if col == 'predicted_price' %}&#8377;{{ row[col]|inr }}{% else %}{{ row[col] }}{% endif %}
+                  </td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="{{ url_for('predict') }}" class="footer-link small"><i class="bi bi-arrow-left me-1"></i>Run another prediction</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
