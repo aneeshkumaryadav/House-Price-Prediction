@@ -1,0 +1,761 @@
+Location,Area (sq ft),BHK,Floor,Balconies,Property Age (Years),Parking,Near Market,Main Road,Furnishing,Price (Lakhs)
+AB Road,1946,3 BHK,2,4,25,Yes,Yes,Yes,Furnished,120.86
+AB Road,3527,4 BHK,4,0,37,Yes,No,No,Non-Furnished,174.94
+Chandan Nagar,517,1 BHK,1,4,13,No,Yes,Yes,Non-Furnished,19.68
+Bengali Square,4018,5 BHK,0,3,7,Yes,No,Yes,Non-Furnished,417.65
+LIG Colony,1484,2 BHK,4,0,25,No,No,No,Furnished,80.77
+Pardesipura,814,2 BHK,2,2,31,Yes,Yes,Yes,Semi-Furnished,33.36
+Rau-Pithampur Road,3608,4 BHK,1,2,42,Yes,Yes,Yes,Furnished,113.01
+Vijay Nagar,3975,5 BHK,3,4,5,Yes,No,No,Semi-Furnished,386.75
+AB Road,4299,4 BHK,1,4,45,Yes,No,No,Non-Furnished,189.11
+Mahalaxmi Nagar,2910,4 BHK,0,1,38,Yes,No,Yes,Furnished,271.83
+Chandan Nagar,3936,4 BHK,3,0,44,No,Yes,Yes,Non-Furnished,106.93
+Scheme No. 140,1289,2 BHK,3,1,1,No,No,No,Semi-Furnished,85.5
+Saket Nagar,1850,3 BHK,1,0,45,Yes,Yes,Yes,Non-Furnished,77.01
+Mahalaxmi Nagar,2042,3 BHK,0,1,27,Yes,Yes,Yes,Semi-Furnished,184.76
+Mhow Road,4682,4 BHK,3,3,42,Yes,No,No,Semi-Furnished,147.96
+Pipliyahana,782,1 BHK,2,4,17,No,No,No,Furnished,45.85
+Navlakha,2497,3 BHK,2,2,2,No,No,No,Furnished,149.05
+Tilak Nagar,2156,3 BHK,1,0,8,Yes,No,No,Furnished,139.27
+Mahalaxmi Nagar,3473,4 BHK,2,1,28,No,Yes,No,Semi-Furnished,306.69
+Khandwa Road,3467,4 BHK,4,1,22,Yes,Yes,Yes,Non-Furnished,145.15
+Bhawarkuan,4649,4 BHK,4,4,38,No,No,No,Non-Furnished,178.83
+Pipliyahana,1899,3 BHK,1,3,20,Yes,Yes,Yes,Non-Furnished,104.86
+Khandwa Road,4898,4 BHK,2,2,4,No,No,No,Furnished,244.03
+Tilak Nagar,2726,3 BHK,3,2,19,Yes,No,No,Non-Furnished,151.81
+Mahalaxmi Nagar,4691,5 BHK,3,4,35,Yes,No,Yes,Furnished,400.75
+Bhawarkuan,4912,4 BHK,2,1,40,No,Yes,Yes,Semi-Furnished,199.08
+Palasia,3433,4 BHK,3,2,42,No,No,No,Furnished,196.08
+Vijay Nagar,2316,4 BHK,2,4,13,Yes,No,No,Furnished,256.92
+Pardesipura,2264,3 BHK,4,1,26,No,No,No,Non-Furnished,88.58
+AB Road,963,2 BHK,3,2,37,Yes,No,No,Furnished,53.03
+Nipania,3968,5 BHK,4,0,39,Yes,Yes,No,Non-Furnished,292.38
+Nipania,4106,5 BHK,1,3,45,No,No,No,Furnished,308.87
+Ujjain Road,1434,2 BHK,1,2,23,No,Yes,Yes,Furnished,51.51
+Limbodi,839,2 BHK,4,3,37,Yes,Yes,Yes,Semi-Furnished,30.3
+Chandan Nagar,1460,2 BHK,3,1,15,Yes,Yes,Yes,Non-Furnished,56.16
+Mahu Naka,4017,4 BHK,3,2,45,Yes,No,No,Furnished,175.92
+Rau-Pithampur Road,4232,4 BHK,4,0,23,No,No,No,Furnished,161.39
+Mhow Road,513,1 BHK,3,3,31,Yes,No,No,Non-Furnished,18.13
+Limbodi,3335,4 BHK,4,2,3,No,No,No,Furnished,161.55
+Super Corridor,4882,5 BHK,3,4,11,No,Yes,No,Semi-Furnished,518.43
+Gandhi Nagar,1694,3 BHK,3,0,29,Yes,Yes,Yes,Furnished,76.64
+Rajendra Nagar,3566,4 BHK,4,4,36,Yes,No,No,Furnished,131.87
+Vaishali Nagar,4705,4 BHK,2,4,6,Yes,No,No,Semi-Furnished,317.55
+Bhawarkuan,1955,3 BHK,3,3,12,Yes,Yes,Yes,Non-Furnished,100.72
+Chandan Nagar,4021,4 BHK,4,4,38,No,Yes,Yes,Non-Furnished,118.96
+Saket Nagar,4753,4 BHK,4,2,14,No,Yes,Yes,Furnished,286.35
+Silicon City,2747,3 BHK,4,4,19,No,No,No,Semi-Furnished,93.82
+Vaishali Nagar,4518,4 BHK,4,2,21,No,Yes,Yes,Non-Furnished,272.7
+Rajendra Nagar,4813,4 BHK,4,3,35,No,No,No,Non-Furnished,164.95
+MR-10,2268,3 BHK,4,2,42,Yes,No,No,Non-Furnished,108.0
+Dhar Road,4433,4 BHK,3,4,1,Yes,Yes,Yes,Semi-Furnished,198.73
+Gandhi Nagar,3982,4 BHK,1,1,40,No,Yes,Yes,Semi-Furnished,151.95
+Scheme No. 94,2766,3 BHK,1,2,9,Yes,No,No,Non-Furnished,144.32
+Bengali Square,1136,2 BHK,4,3,34,No,Yes,No,Furnished,94.09
+Scheme No. 94,911,2 BHK,1,3,9,Yes,No,No,Semi-Furnished,50.89
+AB Road,3808,4 BHK,1,0,36,Yes,Yes,Yes,Furnished,208.45
+Tilak Nagar,1393,2 BHK,1,0,25,Yes,Yes,Yes,Semi-Furnished,79.22
+Super Corridor,586,1 BHK,4,2,20,No,Yes,No,Semi-Furnished,65.49
+MR-10,3069,4 BHK,1,4,18,No,No,No,Non-Furnished,169.64
+Saket Nagar,4284,4 BHK,2,3,11,No,Yes,Yes,Furnished,260.35
+Dhar Road,4331,4 BHK,1,4,20,No,No,No,Non-Furnished,148.46
+Mhow Road,4249,4 BHK,1,1,8,Yes,Yes,Yes,Non-Furnished,179.97
+Lokmanya Nagar,4306,4 BHK,4,1,40,Yes,Yes,Yes,Furnished,185.41
+Rau-Pithampur Road,1067,2 BHK,3,2,40,Yes,No,No,Furnished,34.16
+Gandhi Nagar,2789,3 BHK,4,4,44,Yes,Yes,Yes,Furnished,109.75
+Gandhi Nagar,597,1 BHK,4,0,17,Yes,Yes,Yes,Non-Furnished,28.28
+CAT Road,3867,4 BHK,4,0,27,Yes,No,No,Furnished,164.14
+Nipania,4067,5 BHK,3,3,17,Yes,No,No,Non-Furnished,370.02
+Palasia,3285,4 BHK,3,3,34,Yes,Yes,Yes,Furnished,212.68
+Chandan Nagar,4798,4 BHK,2,2,13,Yes,No,No,Semi-Furnished,186.97
+Pipliyahana,1183,2 BHK,2,4,4,No,No,No,Furnished,76.3
+Scheme No. 54,2462,4 BHK,4,2,14,No,Yes,No,Furnished,293.91
+Vijay Nagar,2451,4 BHK,2,4,18,Yes,Yes,Yes,Unfurnished,262.37
+Scheme No. 54,2982,4 BHK,3,0,3,No,No,No,Furnished,335.23
+Vaishali Nagar,4113,4 BHK,4,0,30,Yes,Yes,Yes,Furnished,251.66
+Sudama Nagar,2667,3 BHK,4,4,24,Yes,Yes,Yes,Semi-Furnished,116.72
+Super Corridor,3884,5 BHK,0,0,36,No,No,No,Semi-Furnished,411.78
+Bhawarkuan,1299,2 BHK,4,1,19,No,Yes,Yes,Non-Furnished,62.71
+Tilak Nagar,4882,4 BHK,4,4,6,Yes,Yes,Yes,Non-Furnished,310.6
+Limbodi,2119,3 BHK,4,2,21,Yes,No,No,Semi-Furnished,85.66
+Nipania,2201,4 BHK,3,2,23,No,Yes,No,Semi-Furnished,185.1
+Gandhi Nagar,4272,4 BHK,4,0,9,No,No,No,Furnished,217.76
+Dhar Road,1572,3 BHK,4,3,13,No,No,No,Non-Furnished,59.01
+Rau,1021,2 BHK,2,3,35,No,No,Yes,Non-Furnished,50.72
+Super Corridor,4464,5 BHK,4,2,41,Yes,No,Yes,Furnished,478.24
+Mahalaxmi Nagar,408,1 BHK,2,2,22,No,Yes,No,Non-Furnished,35.81
+Scheme No. 140,4226,4 BHK,3,3,11,No,No,No,Non-Furnished,248.86
+MR-10,1686,3 BHK,1,2,26,Yes,Yes,Yes,Furnished,100.99
+Ring Road,838,2 BHK,1,4,31,Yes,Yes,Yes,Non-Furnished,39.95
+LIG Colony,3114,4 BHK,1,0,30,No,No,No,Furnished,161.46
+Ujjain Road,2028,3 BHK,2,2,9,No,No,No,Furnished,81.47
+AB Road,3735,4 BHK,3,4,37,Yes,No,No,Furnished,199.43
+Silicon City,1565,3 BHK,3,1,39,No,No,No,Furnished,43.07
+Indore Bypass,4407,4 BHK,4,4,30,No,No,No,Non-Furnished,198.67
+Ring Road,2890,3 BHK,2,4,10,No,Yes,Yes,Non-Furnished,158.57
+Ring Road,1991,3 BHK,4,1,10,No,Yes,Yes,Non-Furnished,111.1
+Vijay Nagar,2694,4 BHK,0,3,14,Yes,Yes,Yes,Semi-Furnished,283.48
+Vaishali Nagar,903,2 BHK,2,2,12,No,No,No,Non-Furnished,55.12
+Bhawarkuan,1662,3 BHK,1,1,8,Yes,Yes,Yes,Furnished,94.29
+Rau-Pithampur Road,3863,4 BHK,4,4,21,Yes,Yes,Yes,Semi-Furnished,149.21
+Pipliyahana,4509,4 BHK,4,4,32,Yes,Yes,Yes,Non-Furnished,228.91
+Chandan Nagar,1874,3 BHK,2,0,6,No,No,No,Furnished,81.1
+Mahu Naka,3596,4 BHK,1,3,42,Yes,Yes,Yes,Semi-Furnished,159.67
+Scheme No. 140,2263,3 BHK,3,1,35,No,No,No,Non-Furnished,109.01
+Khandwa Road,4661,4 BHK,1,1,11,Yes,No,No,Non-Furnished,200.25
+Tilak Nagar,4233,4 BHK,1,1,25,No,Yes,Yes,Non-Furnished,225.25
+Scheme No. 140,2353,3 BHK,2,3,41,Yes,No,No,Semi-Furnished,112.85
+Tilak Nagar,4533,4 BHK,1,4,23,No,Yes,Yes,Semi-Furnished,256.72
+Silicon City,790,1 BHK,3,1,37,Yes,No,No,Furnished,23.01
+Silicon City,3434,4 BHK,4,2,42,Yes,Yes,Yes,Non-Furnished,86.91
+AB Road,3081,4 BHK,1,1,2,No,No,No,Semi-Furnished,210.01
+Vijay Nagar,4217,5 BHK,4,3,27,No,Yes,No,Unfurnished,389.89
+Rajendra Nagar,4277,4 BHK,4,4,4,Yes,Yes,Yes,Non-Furnished,205.68
+Scheme No. 54,4984,5 BHK,3,4,31,Yes,Yes,Yes,Semi-Furnished,543.38
+Annapurna Road,2003,3 BHK,3,1,22,No,No,No,Furnished,100.6
+Super Corridor,1304,3 BHK,3,3,5,Yes,No,No,Furnished,150.85
+Rajendra Nagar,4909,4 BHK,3,0,30,Yes,No,No,Non-Furnished,177.01
+Limbodi,2772,3 BHK,1,0,6,No,Yes,Yes,Non-Furnished,121.41
+AB Road,1894,3 BHK,4,0,4,No,No,No,Non-Furnished,124.56
+CAT Road,1520,3 BHK,4,0,21,No,No,No,Semi-Furnished,65.18
+Bhawarkuan,839,2 BHK,4,3,37,Yes,Yes,Yes,Semi-Furnished,36.73
+Rajendra Nagar,3233,4 BHK,2,1,31,No,Yes,Yes,Non-Furnished,118.16
+Navlakha,4306,4 BHK,3,0,5,No,Yes,Yes,Non-Furnished,245.36
+Navlakha,1594,3 BHK,2,2,10,No,Yes,Yes,Furnished,93.78
+Pipliyahana,4408,4 BHK,1,4,21,No,Yes,Yes,Non-Furnished,237.1
+Mhow Road,3878,4 BHK,2,4,9,No,Yes,Yes,Semi-Furnished,170.32
+Vijay Nagar,1259,3 BHK,3,3,20,No,No,No,Furnished,160.13
+Navlakha,4498,4 BHK,2,3,5,Yes,Yes,Yes,Semi-Furnished,267.55
+Dhar Road,1863,3 BHK,1,0,3,No,No,No,Semi-Furnished,78.25
+Bhawarkuan,2837,3 BHK,4,4,22,No,Yes,Yes,Non-Furnished,133.37
+Vaishali Nagar,2762,3 BHK,3,0,8,Yes,Yes,Yes,Non-Furnished,183.82
+MR-10,924,2 BHK,2,2,31,Yes,Yes,Yes,Furnished,54.53
+Palasia,503,1 BHK,3,3,29,Yes,Yes,Yes,Furnished,36.42
+Mhow Road,3358,4 BHK,4,1,44,Yes,No,No,Furnished,109.18
+Bengali Square,4764,5 BHK,3,0,20,Yes,No,Yes,Semi-Furnished,466.14
+Dhar Road,4915,4 BHK,1,3,40,Yes,No,No,Non-Furnished,134.6
+Gandhi Nagar,1298,2 BHK,1,0,15,No,No,No,Semi-Furnished,59.25
+Rau,3298,4 BHK,2,3,32,No,Yes,Yes,Furnished,222.22
+Vaishali Nagar,2244,3 BHK,3,2,39,No,Yes,Yes,Semi-Furnished,121.95
+Pardesipura,4787,4 BHK,2,2,4,Yes,No,No,Semi-Furnished,237.12
+Rau-Pithampur Road,3308,4 BHK,1,2,38,No,Yes,Yes,Furnished,108.17
+Rajendra Nagar,3228,4 BHK,1,1,38,Yes,No,No,Semi-Furnished,110.02
+Pardesipura,2641,3 BHK,4,4,23,No,Yes,Yes,Furnished,119.82
+AB Road,2040,3 BHK,1,1,26,No,No,No,Furnished,117.75
+Palasia,4252,4 BHK,4,2,15,No,Yes,Yes,Furnished,322.33
+Vijay Nagar,4250,5 BHK,4,4,8,Yes,Yes,No,Furnished,416.3
+Tilak Nagar,699,1 BHK,4,0,5,No,Yes,Yes,Furnished,47.89
+Bengali Square,1022,2 BHK,4,1,10,Yes,No,No,Furnished,104.77
+Saket Nagar,2677,3 BHK,3,1,4,No,Yes,Yes,Non-Furnished,159.89
+MR-10,2130,3 BHK,1,4,21,No,Yes,Yes,Non-Furnished,119.74
+Scheme No. 54,3809,5 BHK,4,2,36,Yes,No,No,Non-Furnished,429.94
+Scheme No. 54,4424,5 BHK,4,3,17,Yes,Yes,Yes,Furnished,480.3
+Indore Bypass,945,2 BHK,1,3,14,Yes,No,No,Non-Furnished,48.18
+MR-10,2237,3 BHK,1,3,20,Yes,No,No,Furnished,134.71
+Dhar Road,593,1 BHK,2,4,25,Yes,No,No,Furnished,21.81
+Scheme No. 54,4292,5 BHK,1,1,3,No,No,Yes,Furnished,473.89
+Pardesipura,669,1 BHK,1,1,6,No,Yes,Yes,Non-Furnished,32.07
+Dhar Road,4410,4 BHK,2,2,9,No,Yes,Yes,Semi-Furnished,182.05
+AB Road,4624,4 BHK,3,0,9,Yes,No,No,Non-Furnished,292.12
+Tilak Nagar,4992,4 BHK,4,2,32,Yes,Yes,Yes,Non-Furnished,257.22
+Tilak Nagar,3691,4 BHK,2,4,20,Yes,No,No,Semi-Furnished,211.22
+Navlakha,4891,4 BHK,4,4,1,Yes,No,No,Non-Furnished,276.54
+Khajrana,2224,3 BHK,2,3,24,No,No,No,Furnished,82.67
+Bhawarkuan,4455,4 BHK,3,4,7,No,Yes,Yes,Furnished,254.74
+Indore Bypass,3643,4 BHK,4,1,2,No,No,No,Semi-Furnished,211.42
+Rajendra Nagar,2155,3 BHK,4,1,10,No,Yes,Yes,Non-Furnished,97.94
+Pardesipura,4272,4 BHK,4,0,9,No,No,No,Furnished,212.49
+Scheme No. 140,3062,4 BHK,1,3,3,No,No,No,Furnished,204.14
+Saket Nagar,1155,2 BHK,4,1,42,No,Yes,Yes,Semi-Furnished,52.37
+Pardesipura,4533,4 BHK,3,0,2,Yes,No,No,Semi-Furnished,229.88
+Chandan Nagar,4232,4 BHK,4,0,23,No,No,No,Furnished,157.29
+Gandhi Nagar,2048,3 BHK,3,1,17,No,No,No,Semi-Furnished,93.46
+Tilak Nagar,2789,3 BHK,4,3,37,Yes,No,No,Semi-Furnished,139.95
+Limbodi,905,2 BHK,2,4,34,Yes,No,No,Semi-Furnished,32.17
+Mahu Naka,1794,3 BHK,3,1,11,Yes,No,No,Furnished,98.82
+Limbodi,4977,4 BHK,3,0,22,Yes,Yes,Yes,Furnished,210.6
+Navlakha,3002,4 BHK,2,0,40,Yes,Yes,Yes,Semi-Furnished,130.29
+Ujjain Road,2468,3 BHK,2,4,25,No,No,No,Semi-Furnished,81.43
+Saket Nagar,606,1 BHK,1,3,27,No,No,No,Semi-Furnished,30.02
+Bhawarkuan,4083,4 BHK,2,0,30,Yes,Yes,Yes,Furnished,190.71
+Sudama Nagar,4117,4 BHK,3,1,29,No,No,No,Semi-Furnished,163.47
+Palasia,3961,4 BHK,3,0,31,Yes,No,No,Furnished,253.65
+CAT Road,1248,2 BHK,1,3,8,No,No,No,Semi-Furnished,58.48
+Gandhi Nagar,4533,4 BHK,3,0,2,Yes,No,No,Semi-Furnished,232.8
+Annapurna Road,4217,4 BHK,4,0,9,Yes,No,No,Semi-Furnished,232.11
+Rau-Pithampur Road,3936,4 BHK,3,0,44,No,Yes,Yes,Non-Furnished,111.45
+MR-10,2058,3 BHK,1,2,33,No,Yes,Yes,Furnished,114.13
+Bengali Square,2258,4 BHK,2,4,12,Yes,Yes,No,Non-Furnished,198.57
+Navlakha,2125,3 BHK,4,1,41,No,Yes,Yes,Non-Furnished,87.71
+Nipania,1153,2 BHK,2,1,18,No,Yes,No,Furnished,96.6
+CAT Road,629,1 BHK,1,1,28,No,No,No,Non-Furnished,23.53
+Dhar Road,4586,4 BHK,1,0,4,No,No,No,Semi-Furnished,190.94
+Chandan Nagar,4106,4 BHK,4,1,5,Yes,Yes,Yes,Furnished,188.49
+Vijay Nagar,4523,5 BHK,3,3,33,No,Yes,No,Unfurnished,408.41
+Silicon City,1915,3 BHK,2,0,2,No,No,No,Furnished,79.17
+Dhar Road,748,1 BHK,2,0,26,No,Yes,Yes,Non-Furnished,25.0
+Vijay Nagar,1783,3 BHK,1,2,44,Yes,Yes,No,Unfurnished,179.71
+Annapurna Road,4684,4 BHK,4,4,18,No,Yes,Yes,Furnished,252.82
+Khajrana,2452,3 BHK,1,1,20,Yes,No,No,Non-Furnished,87.19
+Mahalaxmi Nagar,4449,5 BHK,3,1,15,No,Yes,Yes,Non-Furnished,370.28
+Chandan Nagar,3489,4 BHK,2,1,2,No,No,No,Semi-Furnished,149.53
+Gandhi Nagar,4106,4 BHK,4,2,35,No,No,No,Non-Furnished,153.76
+Khajrana,3786,4 BHK,1,4,5,No,No,No,Semi-Furnished,161.68
+Ring Road,2142,3 BHK,1,4,15,No,Yes,Yes,Semi-Furnished,117.9
+Limbodi,2245,3 BHK,1,4,40,Yes,Yes,Yes,Non-Furnished,71.76
+Rajendra Nagar,1983,3 BHK,3,4,31,Yes,Yes,Yes,Furnished,79.94
+Pardesipura,707,1 BHK,1,1,41,Yes,Yes,Yes,Semi-Furnished,25.84
+Mhow Road,4425,4 BHK,3,3,17,Yes,Yes,Yes,Non-Furnished,176.24
+Palasia,1089,2 BHK,3,3,21,No,Yes,Yes,Non-Furnished,71.9
+Rau-Pithampur Road,2301,3 BHK,3,2,23,Yes,Yes,Yes,Non-Furnished,83.52
+Rau,4097,5 BHK,2,3,44,Yes,Yes,Yes,Semi-Furnished,237.48
+Limbodi,3888,4 BHK,2,2,34,No,No,No,Furnished,139.7
+Limbodi,3040,4 BHK,2,2,29,No,No,No,Semi-Furnished,110.8
+Pipliyahana,3218,4 BHK,4,2,25,No,Yes,Yes,Semi-Furnished,180.56
+Scheme No. 140,1770,3 BHK,4,1,41,Yes,Yes,Yes,Furnished,92.52
+Limbodi,1848,3 BHK,1,4,7,Yes,Yes,Yes,Semi-Furnished,85.56
+Chandan Nagar,4772,4 BHK,2,3,42,No,Yes,Yes,Non-Furnished,132.25
+Limbodi,2837,3 BHK,4,4,22,No,Yes,Yes,Non-Furnished,110.46
+Rau,2484,4 BHK,1,0,8,No,No,Yes,Semi-Furnished,180.95
+Saket Nagar,3798,4 BHK,1,0,9,No,Yes,Yes,Semi-Furnished,225.54
+Vijay Nagar,2397,4 BHK,4,4,22,Yes,No,Yes,Furnished,265.99
+Ring Road,3308,4 BHK,1,2,38,No,Yes,Yes,Furnished,154.18
+Pardesipura,3075,4 BHK,3,0,29,No,Yes,Yes,Furnished,130.48
+Silicon City,4820,4 BHK,4,1,33,No,Yes,Yes,Furnished,148.75
+Khajrana,527,1 BHK,2,0,36,Yes,No,No,Furnished,17.91
+Vijay Nagar,2717,4 BHK,4,4,10,No,Yes,Yes,Furnished,294.19
+Rajendra Nagar,1310,2 BHK,3,4,15,No,Yes,Yes,Semi-Furnished,59.02
+Pipliyahana,721,1 BHK,3,1,31,No,Yes,Yes,Furnished,39.29
+Palasia,3826,4 BHK,2,2,8,Yes,No,No,Semi-Furnished,283.58
+Khandwa Road,4948,4 BHK,1,0,26,No,No,No,Semi-Furnished,196.66
+Khajrana,4408,4 BHK,2,4,7,Yes,Yes,Yes,Semi-Furnished,193.7
+Mhow Road,721,1 BHK,3,1,31,No,Yes,Yes,Furnished,27.34
+Pipliyahana,1207,2 BHK,1,3,44,No,No,No,Furnished,55.62
+Sudama Nagar,3717,4 BHK,3,1,17,Yes,Yes,Yes,Semi-Furnished,172.15
+Scheme No. 54,1513,3 BHK,0,2,36,No,Yes,No,Semi-Furnished,147.45
+Bhawarkuan,676,1 BHK,2,4,10,No,No,No,Semi-Furnished,34.64
+Ring Road,4066,4 BHK,2,4,37,No,Yes,Yes,Non-Furnished,177.76
+Limbodi,2675,3 BHK,4,0,10,Yes,Yes,Yes,Non-Furnished,116.98
+MR-10,2722,3 BHK,4,0,21,No,Yes,Yes,Furnished,170.17
+Pipliyahana,4763,4 BHK,3,4,32,No,Yes,Yes,Non-Furnished,237.94
+AB Road,3343,4 BHK,2,4,40,No,No,No,Semi-Furnished,163.57
+Super Corridor,3032,4 BHK,4,2,13,No,Yes,Yes,Non-Furnished,269.83
+LIG Colony,754,1 BHK,3,4,2,Yes,No,No,Furnished,47.62
+Indore Bypass,3089,4 BHK,4,4,35,Yes,No,No,Semi-Furnished,141.47
+Super Corridor,3589,5 BHK,3,0,25,Yes,Yes,Yes,Furnished,370.78
+Bengali Square,3817,5 BHK,1,4,10,No,Yes,Yes,Semi-Furnished,358.31
+Mahalaxmi Nagar,2117,3 BHK,1,2,25,No,No,No,Non-Furnished,167.97
+Mhow Road,1880,3 BHK,1,4,37,No,No,No,Non-Furnished,58.81
+Navlakha,2575,3 BHK,2,0,4,Yes,No,No,Furnished,153.11
+Scheme No. 94,2490,3 BHK,4,1,7,No,No,No,Furnished,145.73
+Scheme No. 54,2414,4 BHK,2,3,16,No,No,No,Non-Furnished,232.04
+Khandwa Road,3367,4 BHK,4,0,38,No,No,No,Semi-Furnished,122.53
+Gandhi Nagar,1762,3 BHK,1,1,39,No,No,No,Semi-Furnished,65.33
+Lokmanya Nagar,3822,4 BHK,4,1,39,No,No,No,Non-Furnished,147.55
+Pardesipura,3153,4 BHK,4,2,13,Yes,Yes,Yes,Semi-Furnished,152.59
+Annapurna Road,794,1 BHK,2,3,41,Yes,No,No,Semi-Furnished,32.97
+Mahalaxmi Nagar,1333,3 BHK,1,1,35,Yes,Yes,No,Semi-Furnished,116.9
+Vijay Nagar,352,1 BHK,4,1,23,No,No,Yes,Furnished,76.94
+LIG Colony,4367,4 BHK,4,0,38,Yes,No,No,Furnished,221.23
+Nipania,3138,4 BHK,4,1,43,Yes,Yes,No,Furnished,241.84
+MR-10,1584,3 BHK,1,1,41,Yes,No,No,Semi-Furnished,78.63
+Khandwa Road,1559,3 BHK,3,4,3,No,Yes,Yes,Furnished,81.6
+Ujjain Road,2829,3 BHK,3,0,31,No,Yes,Yes,Furnished,94.49
+Mahu Naka,4839,4 BHK,2,0,35,No,Yes,Yes,Furnished,234.06
+Scheme No. 140,1166,2 BHK,3,1,13,Yes,No,No,Non-Furnished,69.89
+Ring Road,4981,4 BHK,2,4,43,No,Yes,Yes,Semi-Furnished,215.87
+Rau,1770,3 BHK,3,4,41,Yes,Yes,No,Non-Furnished,95.9
+Khandwa Road,1304,2 BHK,2,3,9,Yes,Yes,Yes,Furnished,65.88
+Lokmanya Nagar,1918,3 BHK,2,3,26,Yes,Yes,Yes,Semi-Furnished,87.86
+Scheme No. 94,2241,3 BHK,4,3,10,No,Yes,Yes,Semi-Furnished,125.76
+Vijay Nagar,3252,5 BHK,4,4,21,Yes,Yes,No,Furnished,341.24
+Scheme No. 54,4966,5 BHK,0,1,34,No,No,No,Non-Furnished,514.07
+Lokmanya Nagar,2088,3 BHK,2,2,6,No,Yes,Yes,Semi-Furnished,108.09
+Silicon City,1004,2 BHK,3,1,28,Yes,Yes,Yes,Semi-Furnished,32.36
+Lokmanya Nagar,4595,4 BHK,2,4,34,Yes,Yes,Yes,Semi-Furnished,197.29
+Ujjain Road,3094,4 BHK,4,3,28,No,Yes,Yes,Non-Furnished,98.78
+Lokmanya Nagar,4068,4 BHK,2,4,27,No,No,No,Semi-Furnished,176.93
+Mahu Naka,2939,3 BHK,4,2,42,Yes,Yes,Yes,Furnished,138.49
+Chandan Nagar,3412,4 BHK,3,2,34,Yes,No,No,Furnished,112.06
+Bengali Square,3880,5 BHK,3,1,27,Yes,No,Yes,Furnished,402.81
+Pipliyahana,4567,4 BHK,1,3,19,No,No,No,Semi-Furnished,253.53
+Scheme No. 54,2208,4 BHK,4,3,30,No,No,Yes,Furnished,216.97
+Dhar Road,1521,3 BHK,1,4,5,No,Yes,Yes,Semi-Furnished,64.66
+Khandwa Road,2575,3 BHK,3,2,39,Yes,No,No,Non-Furnished,88.27
+Rau-Pithampur Road,2890,3 BHK,2,4,10,No,Yes,Yes,Non-Furnished,116.73
+Ring Road,4319,4 BHK,1,0,7,No,No,No,Semi-Furnished,244.39
+Vijay Nagar,4011,5 BHK,4,3,7,No,Yes,No,Furnished,395.47
+Khandwa Road,1196,2 BHK,2,2,30,Yes,No,No,Non-Furnished,44.82
+Mhow Road,4296,4 BHK,1,2,41,No,No,No,Furnished,140.72
+Mahalaxmi Nagar,3598,5 BHK,1,0,21,Yes,Yes,Yes,Non-Furnished,279.78
+Saket Nagar,884,2 BHK,4,2,7,Yes,Yes,Yes,Semi-Furnished,56.46
+Sudama Nagar,2767,3 BHK,2,2,31,Yes,No,No,Semi-Furnished,107.87
+Limbodi,4280,4 BHK,3,3,13,No,No,No,Semi-Furnished,182.49
+Ujjain Road,688,1 BHK,4,2,41,No,No,No,Furnished,19.81
+AB Road,793,1 BHK,4,1,21,Yes,No,No,Semi-Furnished,50.16
+Khajrana,1980,3 BHK,3,0,42,Yes,Yes,Yes,Non-Furnished,57.49
+Ring Road,3426,4 BHK,3,0,41,No,No,No,Furnished,152.67
+Khajrana,1798,3 BHK,4,0,34,Yes,Yes,Yes,Non-Furnished,58.25
+Bhawarkuan,2245,3 BHK,1,4,40,Yes,Yes,Yes,Non-Furnished,87.4
+Sudama Nagar,1136,2 BHK,4,1,37,No,No,No,Non-Furnished,39.67
+Scheme No. 140,3946,4 BHK,4,1,24,Yes,Yes,Yes,Furnished,238.13
+Palasia,2908,3 BHK,4,0,38,No,No,No,Furnished,174.39
+Bhawarkuan,3302,4 BHK,1,0,28,Yes,No,No,Furnished,149.74
+Gandhi Nagar,1942,3 BHK,1,3,21,No,No,No,Non-Furnished,80.18
+Scheme No. 140,4036,4 BHK,3,3,39,No,No,No,Furnished,203.34
+AB Road,835,2 BHK,3,1,16,No,No,No,Non-Furnished,49.31
+Navlakha,3383,4 BHK,4,3,40,Yes,Yes,Yes,Furnished,153.77
+Palasia,1633,3 BHK,4,1,13,Yes,Yes,Yes,Non-Furnished,119.26
+Super Corridor,1276,2 BHK,1,2,20,No,No,No,Furnished,128.83
+Vaishali Nagar,4755,4 BHK,2,3,35,Yes,Yes,Yes,Semi-Furnished,267.14
+Scheme No. 54,1282,2 BHK,2,4,8,No,No,Yes,Semi-Furnished,146.28
+Ujjain Road,1494,2 BHK,4,1,22,No,Yes,Yes,Furnished,55.51
+AB Road,2884,3 BHK,2,3,11,Yes,No,No,Furnished,194.33
+Lokmanya Nagar,2093,3 BHK,3,1,8,Yes,No,No,Semi-Furnished,105.16
+Scheme No. 94,1376,2 BHK,3,2,39,Yes,No,No,Furnished,59.6
+LIG Colony,2349,3 BHK,4,3,20,No,No,No,Non-Furnished,121.77
+Scheme No. 94,1145,2 BHK,3,4,13,No,Yes,Yes,Non-Furnished,59.5
+Super Corridor,1139,2 BHK,0,0,7,Yes,No,Yes,Semi-Furnished,118.35
+Mahu Naka,3416,4 BHK,3,4,34,No,Yes,Yes,Non-Furnished,155.11
+Mhow Road,1033,2 BHK,2,3,25,Yes,Yes,Yes,Semi-Furnished,40.43
+Bengali Square,2365,4 BHK,2,4,23,Yes,No,No,Semi-Furnished,231.09
+Mahalaxmi Nagar,4957,5 BHK,2,0,40,Yes,Yes,Yes,Semi-Furnished,355.59
+Sudama Nagar,4317,4 BHK,3,3,21,Yes,Yes,Yes,Non-Furnished,183.35
+Gandhi Nagar,3718,4 BHK,3,4,41,No,Yes,Yes,Non-Furnished,135.73
+Rajendra Nagar,1757,3 BHK,2,4,38,Yes,No,No,Semi-Furnished,60.76
+Mhow Road,516,1 BHK,1,1,10,No,No,No,Furnished,22.58
+Limbodi,1024,2 BHK,3,3,29,Yes,Yes,Yes,Non-Furnished,37.85
+Pipliyahana,2308,3 BHK,1,0,20,No,Yes,Yes,Semi-Furnished,131.51
+Silicon City,3668,4 BHK,3,1,37,No,No,No,Furnished,103.73
+Sudama Nagar,891,2 BHK,2,1,37,No,Yes,Yes,Semi-Furnished,33.12
+Ring Road,4221,4 BHK,3,4,17,No,Yes,Yes,Non-Furnished,221.26
+Bhawarkuan,1588,3 BHK,1,3,11,No,Yes,Yes,Semi-Furnished,83.7
+Vijay Nagar,4069,5 BHK,2,3,4,Yes,Yes,Yes,Semi-Furnished,401.73
+Scheme No. 54,3639,5 BHK,4,4,16,Yes,Yes,No,Furnished,377.4
+Sudama Nagar,2613,3 BHK,1,0,27,No,No,No,Furnished,108.37
+Ujjain Road,4392,4 BHK,2,4,28,Yes,Yes,Yes,Semi-Furnished,146.09
+Gandhi Nagar,1601,3 BHK,4,1,3,No,Yes,Yes,Furnished,88.4
+Nipania,3392,4 BHK,0,0,36,No,Yes,No,Non-Furnished,222.95
+Khajrana,4887,4 BHK,4,0,35,No,No,No,Non-Furnished,149.0
+Sudama Nagar,676,1 BHK,4,0,11,Yes,No,No,Semi-Furnished,33.49
+Khandwa Road,2676,3 BHK,2,1,2,No,Yes,Yes,Non-Furnished,128.18
+Navlakha,2917,3 BHK,4,0,5,Yes,Yes,Yes,Furnished,182.54
+Tilak Nagar,1588,3 BHK,1,1,22,No,No,No,Semi-Furnished,88.0
+Mahalaxmi Nagar,4950,5 BHK,4,0,5,Yes,Yes,No,Non-Furnished,445.47
+Gandhi Nagar,2146,3 BHK,2,3,42,Yes,No,No,Semi-Furnished,78.79
+Vaishali Nagar,3868,4 BHK,4,2,2,No,No,No,Furnished,278.31
+CAT Road,4319,4 BHK,2,1,15,Yes,Yes,Yes,Non-Furnished,190.85
+Pipliyahana,3878,4 BHK,2,4,9,No,Yes,Yes,Semi-Furnished,242.1
+Khandwa Road,4095,4 BHK,4,0,12,No,No,No,Furnished,194.92
+Rau-Pithampur Road,3589,4 BHK,1,3,26,No,No,No,Furnished,130.18
+Bhawarkuan,3040,4 BHK,2,2,29,No,No,No,Semi-Furnished,131.79
+Gandhi Nagar,4850,4 BHK,3,4,16,No,Yes,Yes,Non-Furnished,220.51
+Rau-Pithampur Road,548,1 BHK,1,3,27,No,Yes,Yes,Non-Furnished,18.65
+Ring Road,4772,4 BHK,2,3,42,No,Yes,Yes,Non-Furnished,198.77
+Indore Bypass,1455,2 BHK,4,4,21,No,No,No,Non-Furnished,70.36
+Gandhi Nagar,3153,4 BHK,4,2,13,Yes,Yes,Yes,Semi-Furnished,156.52
+Vaishali Nagar,2455,3 BHK,3,1,2,Yes,Yes,Yes,Semi-Furnished,178.87
+Tilak Nagar,3504,4 BHK,2,3,39,No,No,No,Semi-Furnished,168.13
+AB Road,705,1 BHK,2,4,3,No,Yes,Yes,Furnished,51.62
+LIG Colony,4949,4 BHK,4,1,39,No,No,No,Non-Furnished,229.48
+Sudama Nagar,4967,4 BHK,1,0,20,No,No,No,Non-Furnished,201.94
+CAT Road,2174,3 BHK,1,2,4,Yes,No,No,Non-Furnished,101.06
+Khajrana,3155,4 BHK,1,4,32,Yes,No,No,Furnished,107.33
+Rajendra Nagar,2234,3 BHK,1,1,16,No,No,No,Non-Furnished,90.39
+Scheme No. 94,875,2 BHK,3,0,15,Yes,No,No,Furnished,49.12
+Super Corridor,1772,3 BHK,3,1,31,Yes,Yes,Yes,Non-Furnished,177.98
+Nipania,3801,5 BHK,4,3,38,Yes,No,Yes,Furnished,258.34
+Rau,1605,3 BHK,4,4,33,No,Yes,Yes,Semi-Furnished,92.55
+Nipania,1477,3 BHK,1,1,42,No,Yes,Yes,Furnished,101.31
+Ujjain Road,3675,4 BHK,1,3,41,Yes,No,No,Non-Furnished,94.93
+Navlakha,3725,4 BHK,4,2,1,Yes,No,No,Semi-Furnished,220.65
+AB Road,2246,3 BHK,4,2,9,No,No,No,Non-Furnished,142.0
+Khandwa Road,3210,4 BHK,3,2,18,Yes,Yes,Yes,Furnished,150.52
+Dhar Road,4146,4 BHK,3,1,4,Yes,Yes,Yes,Semi-Furnished,181.14
+Scheme No. 94,965,2 BHK,2,0,39,Yes,Yes,Yes,Furnished,42.87
+Ujjain Road,597,1 BHK,3,0,34,Yes,No,No,Semi-Furnished,18.72
+Mahu Naka,1195,2 BHK,2,1,34,Yes,Yes,Yes,Non-Furnished,54.96
+Silicon City,1020,2 BHK,3,3,21,Yes,Yes,Yes,Furnished,36.88
+Rau-Pithampur Road,770,1 BHK,3,1,41,No,No,No,Semi-Furnished,22.85
+Bhawarkuan,1468,2 BHK,3,1,18,No,No,No,Semi-Furnished,70.92
+Dhar Road,578,1 BHK,2,2,17,No,Yes,Yes,Furnished,22.94
+Super Corridor,2658,4 BHK,3,4,24,Yes,No,No,Furnished,244.97
+CAT Road,1219,2 BHK,4,4,28,Yes,No,No,Furnished,51.93
+Ring Road,4305,4 BHK,3,4,40,Yes,Yes,Yes,Non-Furnished,185.87
+Ring Road,3589,4 BHK,1,3,26,No,No,No,Furnished,180.55
+Pipliyahana,3823,4 BHK,3,4,9,No,Yes,Yes,Non-Furnished,229.16
+Indore Bypass,2577,3 BHK,2,4,25,No,No,No,Semi-Furnished,124.75
+Dhar Road,4880,4 BHK,1,0,2,Yes,Yes,Yes,Non-Furnished,205.29
+Super Corridor,715,2 BHK,3,3,42,Yes,Yes,No,Non-Furnished,56.34
+Bhawarkuan,4861,4 BHK,4,2,29,Yes,No,No,Semi-Furnished,215.32
+Bhawarkuan,4660,4 BHK,1,3,27,No,No,No,Non-Furnished,194.92
+CAT Road,3446,4 BHK,2,1,44,Yes,No,No,Non-Furnished,110.97
+Mahalaxmi Nagar,1222,2 BHK,0,2,2,No,No,No,Furnished,117.24
+Rajendra Nagar,4382,4 BHK,3,4,3,Yes,Yes,Yes,Non-Furnished,210.74
+Dhar Road,722,1 BHK,4,4,11,Yes,No,No,Non-Furnished,28.48
+Navlakha,3594,4 BHK,1,2,33,Yes,Yes,Yes,Semi-Furnished,166.33
+Ujjain Road,2270,3 BHK,4,1,30,No,Yes,Yes,Semi-Furnished,74.58
+Khandwa Road,1785,3 BHK,1,0,37,Yes,Yes,Yes,Semi-Furnished,67.27
+Saket Nagar,1994,3 BHK,3,3,38,No,Yes,Yes,Semi-Furnished,93.42
+Rau-Pithampur Road,4590,4 BHK,1,4,22,Yes,Yes,Yes,Semi-Furnished,171.99
+Gandhi Nagar,2803,3 BHK,3,0,28,No,Yes,Yes,Furnished,126.2
+Palasia,3535,4 BHK,4,4,32,Yes,Yes,Yes,Furnished,235.06
+AB Road,4089,4 BHK,3,1,1,Yes,Yes,Yes,Non-Furnished,285.44
+Vijay Nagar,1310,3 BHK,4,2,25,No,Yes,No,Semi-Furnished,157.7
+Scheme No. 54,2354,4 BHK,2,0,27,No,No,Yes,Semi-Furnished,248.7
+Palasia,1346,2 BHK,1,1,38,No,No,No,Furnished,78.35
+Bhawarkuan,4384,4 BHK,2,4,13,Yes,No,No,Semi-Furnished,220.55
+Indore Bypass,1538,3 BHK,4,0,6,Yes,Yes,Yes,Furnished,94.85
+Navlakha,2331,3 BHK,2,4,2,No,Yes,Yes,Furnished,146.03
+Rau-Pithampur Road,4430,4 BHK,2,3,27,No,Yes,Yes,Non-Furnished,151.76
+Sudama Nagar,3298,4 BHK,1,3,19,Yes,Yes,Yes,Non-Furnished,140.83
+Sudama Nagar,4769,4 BHK,2,2,29,Yes,No,No,Semi-Furnished,189.04
+Mahu Naka,2407,3 BHK,4,1,43,No,No,No,Furnished,107.14
+Limbodi,3457,4 BHK,4,4,32,Yes,No,No,Furnished,129.53
+LIG Colony,1673,3 BHK,1,0,34,No,Yes,Yes,Semi-Furnished,85.81
+Mhow Road,1777,3 BHK,4,1,7,Yes,No,No,Non-Furnished,75.46
+Scheme No. 54,3857,5 BHK,1,0,24,No,No,Yes,Non-Furnished,380.77
+Palasia,2964,3 BHK,1,3,9,No,Yes,Yes,Non-Furnished,210.52
+Limbodi,2200,3 BHK,2,2,6,Yes,No,No,Furnished,103.64
+Vaishali Nagar,2871,3 BHK,2,4,24,Yes,No,No,Furnished,175.85
+Rau-Pithampur Road,1495,2 BHK,3,1,35,Yes,No,No,Semi-Furnished,48.36
+Scheme No. 140,4437,4 BHK,1,2,23,Yes,Yes,Yes,Non-Furnished,242.58
+Annapurna Road,803,2 BHK,3,0,39,No,No,No,Non-Furnished,31.45
+Vijay Nagar,3657,5 BHK,4,3,25,No,Yes,Yes,Unfurnished,357.49
+Palasia,2449,3 BHK,1,1,7,No,Yes,Yes,Furnished,191.68
+Khajrana,797,1 BHK,3,4,17,No,No,No,Furnished,32.08
+Navlakha,1165,2 BHK,4,0,17,No,Yes,Yes,Semi-Furnished,63.22
+Rau,2206,4 BHK,3,4,13,No,Yes,No,Non-Furnished,156.08
+Sudama Nagar,2487,3 BHK,2,0,25,No,Yes,Yes,Furnished,109.03
+Dhar Road,2682,3 BHK,2,0,43,Yes,Yes,Yes,Furnished,79.56
+Chandan Nagar,1942,3 BHK,4,2,23,Yes,Yes,Yes,Non-Furnished,69.08
+Rau-Pithampur Road,4312,4 BHK,4,3,13,Yes,No,No,Furnished,181.95
+Scheme No. 140,3376,4 BHK,3,3,44,No,No,No,Semi-Furnished,156.06
+Khajrana,3616,4 BHK,1,0,35,No,No,No,Furnished,117.74
+Nipania,4850,5 BHK,4,1,24,No,Yes,Yes,Non-Furnished,396.04
+Dhar Road,2077,3 BHK,3,2,36,Yes,Yes,Yes,Non-Furnished,62.93
+Pipliyahana,1881,3 BHK,3,2,28,Yes,No,No,Semi-Furnished,100.54
+Tilak Nagar,1480,2 BHK,1,3,12,Yes,Yes,Yes,Non-Furnished,89.27
+Rajendra Nagar,1566,3 BHK,2,0,32,No,No,No,Non-Furnished,54.53
+Khandwa Road,3254,4 BHK,1,2,39,No,Yes,Yes,Non-Furnished,112.8
+Pardesipura,2139,3 BHK,3,1,44,Yes,Yes,Yes,Semi-Furnished,74.65
+Chandan Nagar,3088,4 BHK,1,2,14,No,Yes,Yes,Furnished,127.32
+Rau-Pithampur Road,698,1 BHK,1,2,45,Yes,Yes,Yes,Semi-Furnished,20.67
+Mhow Road,3145,4 BHK,1,2,32,Yes,Yes,Yes,Furnished,117.48
+Navlakha,4007,4 BHK,1,1,30,Yes,Yes,Yes,Furnished,197.66
+Saket Nagar,871,2 BHK,2,3,30,Yes,No,No,Furnished,45.27
+Rajendra Nagar,2013,3 BHK,1,2,8,No,Yes,Yes,Non-Furnished,90.82
+AB Road,3068,4 BHK,4,1,44,Yes,Yes,Yes,Furnished,158.85
+Limbodi,4892,4 BHK,3,2,15,Yes,No,No,Semi-Furnished,205.98
+Sudama Nagar,3075,4 BHK,2,3,15,No,No,No,Furnished,144.23
+Saket Nagar,2447,3 BHK,4,4,2,No,No,No,Semi-Furnished,151.94
+Khandwa Road,4679,4 BHK,1,2,26,Yes,No,No,Non-Furnished,177.44
+Vijay Nagar,3966,5 BHK,0,4,3,No,No,No,Semi-Furnished,382.42
+Khandwa Road,3663,4 BHK,4,0,26,Yes,Yes,Yes,Non-Furnished,148.05
+Rau,3814,5 BHK,0,4,12,Yes,Yes,No,Non-Furnished,253.68
+Navlakha,3063,4 BHK,1,3,24,Yes,No,No,Semi-Furnished,147.15
+Rau,4090,5 BHK,0,2,29,No,No,Yes,Non-Furnished,278.37
+Super Corridor,4943,5 BHK,2,1,4,Yes,No,Yes,Semi-Furnished,541.55
+Mahu Naka,3481,4 BHK,2,1,3,No,Yes,Yes,Furnished,205.07
+Nipania,725,2 BHK,3,3,1,No,No,Yes,Furnished,60.37
+Khajrana,3099,4 BHK,4,0,21,No,Yes,Yes,Non-Furnished,114.31
+Rau,3012,4 BHK,3,3,30,No,Yes,Yes,Furnished,192.93
+Limbodi,4557,4 BHK,2,0,2,No,No,No,Semi-Furnished,211.29
+Dhar Road,1295,2 BHK,2,0,37,Yes,No,No,Non-Furnished,37.58
+Indore Bypass,3391,4 BHK,3,3,14,Yes,Yes,Yes,Furnished,194.63
+Scheme No. 54,3838,5 BHK,2,4,24,Yes,Yes,No,Semi-Furnished,460.54
+Bengali Square,4892,5 BHK,0,1,24,Yes,Yes,Yes,Non-Furnished,441.11
+Pipliyahana,4107,4 BHK,3,3,41,Yes,Yes,Yes,Semi-Furnished,200.19
+Pardesipura,3718,4 BHK,3,4,41,No,Yes,Yes,Non-Furnished,127.55
+Scheme No. 54,2961,4 BHK,1,3,28,No,No,No,Non-Furnished,317.12
+Mhow Road,2746,3 BHK,3,2,7,Yes,Yes,Yes,Semi-Furnished,124.37
+Scheme No. 94,2092,3 BHK,4,3,16,No,Yes,Yes,Furnished,115.84
+Sudama Nagar,672,1 BHK,3,4,7,Yes,Yes,Yes,Semi-Furnished,35.16
+Mahalaxmi Nagar,4758,5 BHK,4,2,27,No,Yes,No,Semi-Furnished,443.64
+Palasia,4104,4 BHK,4,3,32,No,No,No,Semi-Furnished,252.23
+Pipliyahana,2746,3 BHK,3,2,7,Yes,Yes,Yes,Semi-Furnished,177.45
+Silicon City,2800,3 BHK,3,0,23,Yes,No,No,Furnished,94.94
+Navlakha,2427,3 BHK,3,0,10,No,Yes,Yes,Semi-Furnished,138.74
+Bhawarkuan,2549,3 BHK,1,2,32,No,Yes,Yes,Semi-Furnished,111.29
+Rau,2075,3 BHK,4,2,25,No,Yes,No,Non-Furnished,132.45
+Mahalaxmi Nagar,765,2 BHK,0,1,10,No,No,Yes,Furnished,69.42
+Palasia,696,1 BHK,4,1,33,Yes,Yes,Yes,Semi-Furnished,46.69
+Ujjain Road,4836,4 BHK,4,0,5,No,Yes,Yes,Semi-Furnished,204.2
+CAT Road,4909,4 BHK,3,0,42,Yes,Yes,Yes,Semi-Furnished,176.89
+CAT Road,1521,3 BHK,1,4,5,No,Yes,Yes,Semi-Furnished,75.61
+Bengali Square,1754,3 BHK,3,0,8,No,No,Yes,Non-Furnished,176.75
+Scheme No. 94,2455,3 BHK,4,1,43,No,No,No,Non-Furnished,91.8
+Lokmanya Nagar,515,1 BHK,3,1,10,No,Yes,Yes,Non-Furnished,25.1
+Ujjain Road,2402,3 BHK,3,4,22,No,Yes,Yes,Furnished,88.56
+MR-10,3081,4 BHK,3,4,45,Yes,No,No,Furnished,152.83
+Vijay Nagar,1650,3 BHK,1,2,39,Yes,No,Yes,Semi-Furnished,179.4
+Scheme No. 94,1633,3 BHK,1,0,8,No,Yes,Yes,Furnished,94.77
+Super Corridor,4201,5 BHK,3,0,42,No,No,Yes,Furnished,442.88
+Chandan Nagar,1838,3 BHK,1,3,7,Yes,Yes,Yes,Semi-Furnished,78.38
+LIG Colony,2050,3 BHK,2,4,12,No,Yes,Yes,Semi-Furnished,119.86
+Tilak Nagar,1221,2 BHK,4,1,44,No,No,No,Non-Furnished,54.08
+Palasia,4591,4 BHK,1,2,22,Yes,Yes,Yes,Semi-Furnished,312.9
+Lokmanya Nagar,1103,2 BHK,1,3,14,Yes,No,No,Non-Furnished,50.87
+Dhar Road,689,1 BHK,4,2,14,Yes,No,No,Non-Furnished,26.45
+Nipania,4439,5 BHK,4,2,33,No,Yes,No,Semi-Furnished,404.31
+Vijay Nagar,2815,4 BHK,2,3,37,Yes,Yes,No,Semi-Furnished,277.75
+Scheme No. 140,1153,2 BHK,1,3,37,Yes,No,No,Furnished,60.04
+MR-10,2262,3 BHK,4,4,36,Yes,No,No,Furnished,123.03
+Bhawarkuan,4759,4 BHK,3,4,16,Yes,Yes,Yes,Non-Furnished,235.22
+Bhawarkuan,4933,4 BHK,4,1,7,No,No,No,Semi-Furnished,263.15
+Khajrana,4155,4 BHK,3,4,38,Yes,Yes,Yes,Non-Furnished,126.13
+Lokmanya Nagar,1607,3 BHK,4,0,32,Yes,Yes,Yes,Furnished,74.12
+Nipania,924,2 BHK,3,2,23,Yes,Yes,No,Furnished,77.73
+Rajendra Nagar,1288,2 BHK,3,2,36,Yes,No,No,Semi-Furnished,46.16
+Palasia,553,1 BHK,4,2,8,Yes,No,No,Semi-Furnished,44.65
+Silicon City,3193,4 BHK,3,0,19,No,No,No,Furnished,112.23
+Vijay Nagar,4599,5 BHK,1,3,25,No,No,Yes,Semi-Furnished,422.93
+Tilak Nagar,1956,3 BHK,3,3,2,No,No,No,Non-Furnished,122.47
+Tilak Nagar,4642,4 BHK,1,0,9,Yes,No,No,Semi-Furnished,286.77
+Ujjain Road,1658,3 BHK,4,1,16,No,No,No,Semi-Furnished,61.03
+Chandan Nagar,4590,4 BHK,1,4,22,Yes,Yes,Yes,Semi-Furnished,167.99
+Khandwa Road,4679,4 BHK,2,0,42,No,No,No,Non-Furnished,152.76
+Mahu Naka,559,1 BHK,3,4,11,No,Yes,Yes,Semi-Furnished,30.59
+Dhar Road,4653,4 BHK,1,0,19,Yes,No,No,Furnished,175.59
+Annapurna Road,4697,4 BHK,3,2,36,Yes,Yes,Yes,Furnished,213.73
+Saket Nagar,3746,4 BHK,2,4,7,Yes,Yes,Yes,Furnished,236.67
+Limbodi,1894,3 BHK,3,0,45,No,No,No,Semi-Furnished,58.33
+Khandwa Road,965,2 BHK,2,1,9,Yes,Yes,Yes,Furnished,49.04
+Silicon City,2027,3 BHK,4,2,6,No,Yes,Yes,Furnished,84.18
+Mhow Road,4991,4 BHK,3,4,42,Yes,Yes,Yes,Non-Furnished,155.97
+Ring Road,1874,3 BHK,2,0,6,No,No,No,Furnished,111.31
+Pipliyahana,4227,4 BHK,3,1,22,Yes,No,No,Furnished,242.17
+MR-10,2470,3 BHK,3,3,34,No,Yes,Yes,Semi-Furnished,134.3
+Scheme No. 94,3616,4 BHK,1,2,20,No,No,No,Semi-Furnished,176.17
+Vijay Nagar,3764,5 BHK,1,3,28,No,Yes,Yes,Furnished,374.28
+Dhar Road,3672,4 BHK,2,0,34,No,Yes,Yes,Semi-Furnished,116.7
+Gandhi Nagar,2539,3 BHK,4,4,9,No,Yes,Yes,Semi-Furnished,128.94
+Mahu Naka,4224,4 BHK,2,2,41,Yes,No,No,Non-Furnished,174.15
+Mahu Naka,1242,2 BHK,1,0,5,No,Yes,Yes,Semi-Furnished,69.27
+CAT Road,4331,4 BHK,1,4,20,No,No,No,Non-Furnished,174.31
+Bengali Square,3863,5 BHK,0,2,14,No,No,No,Non-Furnished,380.49
+Scheme No. 94,1823,3 BHK,4,4,1,No,Yes,Yes,Furnished,114.83
+Scheme No. 140,4791,4 BHK,3,4,29,No,Yes,Yes,Semi-Furnished,262.71
+Mhow Road,3043,4 BHK,3,2,1,No,Yes,Yes,Furnished,149.2
+Rau,2401,4 BHK,0,4,14,Yes,Yes,No,Semi-Furnished,160.92
+Bengali Square,589,1 BHK,2,4,27,Yes,Yes,Yes,Furnished,56.39
+Nipania,2448,4 BHK,2,4,30,No,No,Yes,Semi-Furnished,215.04
+Pardesipura,1272,2 BHK,3,3,38,Yes,No,No,Furnished,48.05
+Rau-Pithampur Road,2951,3 BHK,2,2,45,Yes,Yes,Yes,Furnished,89.64
+Dhar Road,2174,3 BHK,1,2,4,Yes,No,No,Non-Furnished,87.65
+Mahu Naka,3628,4 BHK,3,4,6,Yes,Yes,Yes,Semi-Furnished,205.71
+Scheme No. 140,1610,3 BHK,4,4,7,Yes,No,No,Non-Furnished,100.98
+Bhawarkuan,2777,3 BHK,2,0,29,No,No,No,Furnished,124.73
+Ujjain Road,918,2 BHK,3,0,23,No,No,No,Non-Furnished,29.58
+Super Corridor,2071,3 BHK,0,3,35,No,Yes,No,Furnished,222.77
+Mahu Naka,1549,3 BHK,2,0,10,No,Yes,Yes,Semi-Furnished,84.61
+Rau-Pithampur Road,1904,3 BHK,3,3,6,No,Yes,Yes,Non-Furnished,80.2
+Vijay Nagar,4691,5 BHK,2,3,20,Yes,No,Yes,Unfurnished,429.87
+Rajendra Nagar,4329,4 BHK,2,3,4,Yes,Yes,Yes,Semi-Furnished,214.04
+Annapurna Road,3727,4 BHK,2,4,18,Yes,Yes,Yes,Furnished,199.82
+Scheme No. 54,1143,2 BHK,1,4,7,No,Yes,Yes,Non-Furnished,116.22
+Rajendra Nagar,750,1 BHK,3,4,29,Yes,No,No,Furnished,30.41
+Rau,4799,5 BHK,2,0,4,No,No,Yes,Furnished,261.35
+Indore Bypass,1090,2 BHK,4,3,23,No,No,No,Non-Furnished,51.91
+Dhar Road,2153,3 BHK,4,3,28,No,Yes,Yes,Semi-Furnished,74.32
+Palasia,4186,4 BHK,2,4,4,Yes,No,No,Semi-Furnished,319.14
+Bhawarkuan,1128,2 BHK,1,0,9,No,Yes,Yes,Furnished,62.53
+Pardesipura,2625,3 BHK,1,1,39,No,Yes,Yes,Semi-Furnished,94.91
+Pipliyahana,1213,2 BHK,1,2,2,Yes,Yes,Yes,Semi-Furnished,81.08
+Scheme No. 140,2949,3 BHK,2,0,16,Yes,No,No,Furnished,182.13
+Scheme No. 140,4934,4 BHK,1,4,15,Yes,No,No,Non-Furnished,278.67
+AB Road,1821,3 BHK,1,2,25,Yes,No,No,Furnished,108.52
+LIG Colony,2549,3 BHK,2,1,10,No,No,No,Furnished,148.68
+Dhar Road,3718,4 BHK,1,1,27,No,No,No,Non-Furnished,118.31
+Mahu Naka,1801,3 BHK,4,2,36,No,Yes,Yes,Non-Furnished,81.32
+Saket Nagar,1142,2 BHK,4,2,10,Yes,No,No,Semi-Furnished,68.62
+Bengali Square,1779,3 BHK,2,1,5,Yes,No,No,Semi-Furnished,183.02
+Scheme No. 94,4893,4 BHK,2,3,12,No,No,No,Semi-Furnished,258.76
+CAT Road,684,1 BHK,2,3,34,Yes,No,No,Furnished,27.53
+Pardesipura,3903,4 BHK,2,0,39,No,No,No,Semi-Furnished,136.68
+Rau,1284,2 BHK,3,0,14,No,No,No,Furnished,78.32
+Rajendra Nagar,2241,3 BHK,2,3,7,No,No,No,Furnished,107.47
+Rau-Pithampur Road,4305,4 BHK,3,4,40,Yes,Yes,Yes,Non-Furnished,128.83
+Chandan Nagar,4319,4 BHK,1,0,7,No,No,No,Semi-Furnished,175.89
+Palasia,4969,4 BHK,1,2,35,Yes,No,No,Semi-Furnished,290.76
+Limbodi,4384,4 BHK,2,4,13,Yes,No,No,Semi-Furnished,186.58
+Mahu Naka,1620,3 BHK,3,3,20,Yes,No,No,Non-Furnished,78.17
+Silicon City,2600,3 BHK,2,3,41,No,Yes,Yes,Furnished,71.04
+Palasia,767,1 BHK,1,4,2,No,No,No,Non-Furnished,55.06
+Rau,680,1 BHK,0,3,26,No,Yes,No,Furnished,43.01
+Pardesipura,4006,4 BHK,1,0,6,No,No,No,Non-Furnished,184.39
+Annapurna Road,3689,4 BHK,2,3,13,No,No,No,Non-Furnished,182.78
+Bhawarkuan,4191,4 BHK,1,0,13,No,Yes,Yes,Non-Furnished,207.84
+Tilak Nagar,3054,4 BHK,1,0,24,No,Yes,Yes,Non-Furnished,163.89
+Khajrana,3526,4 BHK,1,2,34,No,Yes,Yes,Semi-Furnished,115.57
+Silicon City,2349,3 BHK,4,3,20,No,No,No,Non-Furnished,75.51
+Nipania,381,1 BHK,3,3,1,No,Yes,Yes,Non-Furnished,38.02
+Rau,2451,4 BHK,3,1,38,Yes,Yes,No,Non-Furnished,170.78
+Ring Road,1562,3 BHK,1,2,6,Yes,Yes,Yes,Furnished,96.94
+Pipliyahana,1511,3 BHK,3,1,25,Yes,Yes,Yes,Furnished,88.42
+AB Road,4535,4 BHK,3,2,17,No,No,No,Non-Furnished,265.5
+Scheme No. 54,3959,5 BHK,4,3,40,No,No,No,Furnished,464.22
+Indore Bypass,4148,4 BHK,3,2,5,Yes,No,No,Furnished,244.25
+LIG Colony,1004,2 BHK,3,1,28,Yes,Yes,Yes,Semi-Furnished,55.34
+CAT Road,2163,3 BHK,2,1,4,No,No,No,Semi-Furnished,105.33
+Khajrana,636,1 BHK,2,0,34,No,No,No,Furnished,21.12
+Limbodi,2284,3 BHK,3,4,42,No,Yes,Yes,Non-Furnished,71.64
+Limbodi,4455,4 BHK,3,4,7,No,Yes,Yes,Furnished,214.17
+Palasia,2318,3 BHK,4,2,21,Yes,No,No,Non-Furnished,151.68
+Bengali Square,4479,5 BHK,1,0,10,Yes,No,Yes,Non-Furnished,391.49
+Mhow Road,1972,3 BHK,3,4,40,No,Yes,Yes,Non-Furnished,62.67
+Khajrana,4175,4 BHK,3,1,43,No,Yes,Yes,Furnished,128.61
+Scheme No. 140,2509,3 BHK,2,0,41,Yes,No,No,Furnished,124.68
+MR-10,3127,4 BHK,1,1,30,No,Yes,Yes,Semi-Furnished,172.68
+Khandwa Road,3718,4 BHK,3,0,2,Yes,No,No,Semi-Furnished,183.31
+Gandhi Nagar,669,1 BHK,1,1,6,No,Yes,Yes,Non-Furnished,32.3
+Mahalaxmi Nagar,1612,3 BHK,2,3,20,No,No,Yes,Non-Furnished,124.16
+Saket Nagar,1867,3 BHK,4,1,34,No,No,No,Semi-Furnished,88.83
+Scheme No. 140,1966,3 BHK,1,1,12,No,Yes,Yes,Furnished,126.24
+Mahu Naka,1443,2 BHK,2,1,27,Yes,Yes,Yes,Furnished,74.79
+Gandhi Nagar,2126,3 BHK,2,4,34,Yes,Yes,Yes,Furnished,91.06
+Rau,692,1 BHK,3,4,37,Yes,No,No,Semi-Furnished,31.95
+Pardesipura,1077,2 BHK,2,3,31,Yes,No,No,Semi-Furnished,42.2
+Scheme No. 94,2405,3 BHK,2,4,27,Yes,No,No,Furnished,116.58
+LIG Colony,3323,4 BHK,3,0,32,No,No,No,Semi-Furnished,166.36
+Vaishali Nagar,3244,4 BHK,2,4,7,Yes,No,No,Semi-Furnished,218.21
+Tilak Nagar,3759,4 BHK,1,4,12,No,Yes,Yes,Furnished,239.31
+Scheme No. 54,5000,5 BHK,2,3,1,No,No,No,Furnished,519.55
+Rajendra Nagar,3054,4 BHK,3,0,30,Yes,Yes,Yes,Furnished,123.93
+Ring Road,3166,4 BHK,1,2,28,Yes,Yes,Yes,Non-Furnished,150.52
+Saket Nagar,799,1 BHK,1,3,37,No,Yes,Yes,Furnished,38.39
+Vaishali Nagar,1592,3 BHK,3,4,3,Yes,No,No,Non-Furnished,106.72
+Mahu Naka,4225,4 BHK,2,0,19,Yes,No,No,Semi-Furnished,210.48
+Navlakha,2307,3 BHK,3,3,7,No,Yes,Yes,Semi-Furnished,135.09
+Pipliyahana,942,2 BHK,3,0,31,Yes,No,No,Furnished,51.43
+Pardesipura,2691,3 BHK,4,3,23,No,Yes,Yes,Non-Furnished,112.87
+Lokmanya Nagar,4378,4 BHK,2,2,33,No,Yes,Yes,Semi-Furnished,188.55
+Rau-Pithampur Road,1771,3 BHK,1,2,44,No,Yes,Yes,Furnished,53.77
+MR-10,3673,4 BHK,2,0,31,No,Yes,Yes,Furnished,208.82
+Mahalaxmi Nagar,401,1 BHK,2,4,11,No,Yes,No,Furnished,45.33
+Khajrana,2632,3 BHK,4,0,18,No,Yes,Yes,Semi-Furnished,105.11
+MR-10,2383,3 BHK,4,2,42,Yes,Yes,Yes,Semi-Furnished,123.78
+Gandhi Nagar,2351,3 BHK,2,3,13,Yes,No,No,Semi-Furnished,111.03
+MR-10,4371,4 BHK,3,2,11,No,Yes,Yes,Semi-Furnished,283.28
+Silicon City,2050,3 BHK,3,3,34,No,No,No,Non-Furnished,55.34
+Navlakha,4444,4 BHK,2,3,43,No,Yes,Yes,Non-Furnished,177.04
+Khajrana,4882,4 BHK,3,4,9,Yes,Yes,Yes,Semi-Furnished,212.11
+Gandhi Nagar,2741,3 BHK,1,0,34,No,No,No,Semi-Furnished,106.52
+Gandhi Nagar,658,1 BHK,3,0,41,Yes,Yes,Yes,Semi-Furnished,26.17
+Vijay Nagar,1023,2 BHK,2,2,28,Yes,Yes,Yes,Furnished,141.41
+Bengali Square,2405,4 BHK,2,3,38,Yes,Yes,No,Non-Furnished,207.28
+AB Road,746,1 BHK,4,4,15,No,No,No,Furnished,48.86
+Mahalaxmi Nagar,3744,5 BHK,0,2,34,Yes,Yes,Yes,Furnished,310.94
+Limbodi,2444,3 BHK,4,3,6,Yes,No,No,Furnished,116.65
+Rajendra Nagar,4937,4 BHK,4,2,22,Yes,Yes,Yes,Furnished,218.22
+Rau,3121,4 BHK,4,2,19,No,No,Yes,Semi-Furnished,198.11
+Scheme No. 94,1768,3 BHK,3,1,4,Yes,Yes,Yes,Non-Furnished,101.2
+Rau,2386,4 BHK,0,3,17,Yes,No,No,Non-Furnished,166.95
+Rajendra Nagar,3820,4 BHK,2,0,12,Yes,No,No,Non-Furnished,162.7
+Rau-Pithampur Road,1281,2 BHK,3,3,9,Yes,Yes,Yes,Non-Furnished,53.49
+Khandwa Road,574,1 BHK,2,0,42,Yes,Yes,Yes,Furnished,22.1
+Gandhi Nagar,4710,4 BHK,1,1,43,No,Yes,Yes,Semi-Furnished,174.49
+Navlakha,1896,3 BHK,2,2,31,No,No,No,Furnished,88.18
+Rau,1692,3 BHK,2,0,27,No,Yes,Yes,Furnished,105.99
+Khajrana,1295,2 BHK,2,3,32,Yes,No,No,Semi-Furnished,43.25
+LIG Colony,985,2 BHK,4,4,3,No,No,No,Furnished,60.35
+Mahu Naka,985,2 BHK,3,1,18,No,No,No,Semi-Furnished,49.48
+Dhar Road,2727,3 BHK,3,0,12,Yes,No,No,Semi-Furnished,107.87
+Navlakha,769,1 BHK,4,0,26,Yes,Yes,Yes,Non-Furnished,38.34
+Palasia,3718,4 BHK,4,4,13,Yes,Yes,Yes,Non-Furnished,267.47
+Saket Nagar,917,2 BHK,1,2,4,Yes,Yes,Yes,Furnished,60.28
+Silicon City,2903,3 BHK,3,3,17,No,Yes,Yes,Non-Furnished,98.6
+Vijay Nagar,4640,5 BHK,3,3,4,Yes,Yes,No,Unfurnished,431.2
+Ring Road,4798,4 BHK,2,2,13,Yes,No,No,Semi-Furnished,263.5
+Annapurna Road,1516,3 BHK,1,2,10,No,Yes,Yes,Semi-Furnished,82.81
+AB Road,2743,3 BHK,3,4,18,Yes,Yes,Yes,Furnished,181.97
+Khajrana,3860,4 BHK,1,2,23,Yes,No,No,Semi-Furnished,139.46
+Ujjain Road,1350,2 BHK,2,1,41,No,Yes,Yes,Non-Furnished,36.24
+Scheme No. 94,1890,3 BHK,3,4,43,Yes,No,No,Non-Furnished,71.36
+Scheme No. 94,1633,3 BHK,2,3,45,Yes,Yes,Yes,Furnished,66.6
+Khajrana,2693,3 BHK,1,3,23,Yes,No,No,Furnished,101.38
+Annapurna Road,3332,4 BHK,1,0,35,No,Yes,Yes,Furnished,150.02
+Rau-Pithampur Road,4843,4 BHK,3,3,5,Yes,Yes,Yes,Non-Furnished,206.71
+Lokmanya Nagar,4317,4 BHK,3,3,21,Yes,Yes,Yes,Non-Furnished,196.59
+Lokmanya Nagar,2971,3 BHK,3,2,18,No,Yes,Yes,Non-Furnished,137.41
+Pipliyahana,1865,3 BHK,2,1,15,No,No,No,Non-Furnished,102.33
+Navlakha,1649,3 BHK,1,2,34,No,Yes,Yes,Furnished,77.64
+Rau,3059,4 BHK,4,1,38,Yes,No,Yes,Furnished,210.98
+Silicon City,1153,2 BHK,1,1,17,No,No,No,Furnished,40.82
+Sudama Nagar,2617,3 BHK,2,1,37,Yes,Yes,Yes,Furnished,102.02
+Bengali Square,3331,4 BHK,1,3,45,No,No,Yes,Furnished,291.72
+Ring Road,4106,4 BHK,4,1,5,Yes,Yes,Yes,Furnished,259.48
+LIG Colony,3910,4 BHK,2,1,1,No,No,No,Semi-Furnished,230.31
+Super Corridor,1907,3 BHK,3,4,44,Yes,No,No,Furnished,157.6
+Saket Nagar,2823,3 BHK,3,0,13,No,Yes,Yes,Non-Furnished,157.36
+Rau-Pithampur Road,4957,4 BHK,4,1,26,No,No,No,Semi-Furnished,175.51
+Palasia,700,1 BHK,4,0,3,Yes,Yes,Yes,Semi-Furnished,59.76
+Ring Road,1600,3 BHK,3,0,7,No,Yes,Yes,Semi-Furnished,95.1
+Dhar Road,4025,4 BHK,3,4,13,No,Yes,Yes,Non-Furnished,154.67
+Pardesipura,4106,4 BHK,4,2,35,No,No,No,Non-Furnished,146.04
+CAT Road,3463,4 BHK,4,2,11,Yes,No,No,Non-Furnished,154.93
+Khandwa Road,585,1 BHK,1,3,27,Yes,Yes,Yes,Non-Furnished,23.68
+Bhawarkuan,2200,3 BHK,2,2,6,Yes,No,No,Furnished,122.03
+Palasia,4250,4 BHK,3,0,25,No,No,No,Semi-Furnished,274.89
+Khandwa Road,2332,3 BHK,3,2,29,Yes,Yes,Yes,Semi-Furnished,95.97
+Vijay Nagar,460,1 BHK,4,1,7,No,Yes,No,Furnished,93.9
+Tilak Nagar,3281,4 BHK,1,3,18,No,No,No,Semi-Furnished,187.83
+Gandhi Nagar,2641,3 BHK,4,4,23,No,Yes,Yes,Furnished,124.97
+Mahu Naka,4531,4 BHK,2,3,42,Yes,Yes,Yes,Non-Furnished,194.11
+Bengali Square,4764,5 BHK,1,0,14,No,Yes,No,Semi-Furnished,469.29
+Annapurna Road,4380,4 BHK,3,4,32,No,Yes,Yes,Non-Furnished,190.24
+LIG Colony,3376,4 BHK,3,1,45,No,No,No,Semi-Furnished,155.94
+Mhow Road,4107,4 BHK,3,3,41,Yes,Yes,Yes,Semi-Furnished,135.57
+Rau,1210,2 BHK,1,2,39,No,No,Yes,Non-Furnished,58.79
+Rau,3922,5 BHK,0,3,44,No,No,No,Semi-Furnished,234.29
+Navlakha,4801,4 BHK,2,4,45,No,No,No,Non-Furnished,177.48
+Ring Road,2301,3 BHK,3,2,23,Yes,Yes,Yes,Non-Furnished,116.55
+Mhow Road,782,1 BHK,2,4,17,No,No,No,Furnished,32.48
+Lokmanya Nagar,3118,4 BHK,2,3,21,Yes,Yes,Yes,Non-Furnished,141.31
+Mahu Naka,4333,4 BHK,1,0,21,Yes,Yes,Yes,Furnished,229.08
+AB Road,4157,4 BHK,3,2,2,Yes,No,No,Semi-Furnished,292.04
+Scheme No. 94,3872,4 BHK,3,1,45,Yes,No,No,Furnished,153.68
+Saket Nagar,2316,3 BHK,1,2,12,No,Yes,Yes,Semi-Furnished,134.36
+LIG Colony,2339,3 BHK,3,2,33,No,Yes,Yes,Non-Furnished,117.57
+Scheme No. 140,3937,4 BHK,3,0,13,No,No,No,Furnished,248.01
+Scheme No. 54,2498,4 BHK,3,4,2,Yes,No,Yes,Furnished,310.03
+Pipliyahana,3870,4 BHK,3,2,27,No,Yes,Yes,Semi-Furnished,211.84
+Super Corridor,3653,5 BHK,4,3,39,Yes,Yes,No,Furnished,383.9
+Navlakha,2602,3 BHK,4,0,27,No,Yes,Yes,Non-Furnished,123.68
+Vijay Nagar,1514,3 BHK,0,3,32,Yes,Yes,No,Semi-Furnished,171.68
+Nipania,4126,5 BHK,4,2,45,Yes,Yes,No,Semi-Furnished,369.83
+Limbodi,1128,2 BHK,1,0,9,No,Yes,Yes,Furnished,52.6
+Dhar Road,2954,3 BHK,1,0,27,Yes,No,No,Furnished,102.7
+Navlakha,2007,3 BHK,1,3,32,No,Yes,Yes,Semi-Furnished,93.04
+Rajendra Nagar,1982,3 BHK,3,4,44,Yes,No,No,Furnished,66.54
+Scheme No. 140,4740,4 BHK,3,0,34,Yes,Yes,Yes,Non-Furnished,239.57
+LIG Colony,693,1 BHK,3,3,2,Yes,Yes,Yes,Semi-Furnished,44.43
+Silicon City,2303,3 BHK,2,4,24,No,Yes,Yes,Semi-Furnished,75.47
+Chandan Nagar,2890,3 BHK,2,4,10,No,Yes,Yes,Non-Furnished,113.97
+Pipliyahana,616,1 BHK,2,0,2,Yes,Yes,Yes,Semi-Furnished,42.58
+CAT Road,3762,4 BHK,4,0,7,Yes,Yes,Yes,Semi-Furnished,189.03
+MR-10,2162,3 BHK,1,0,8,Yes,No,No,Non-Furnished,130.67
+Bhawarkuan,1848,3 BHK,1,4,7,Yes,Yes,Yes,Semi-Furnished,102.02
+Dhar Road,2277,3 BHK,2,4,28,No,Yes,Yes,Semi-Furnished,77.56
+Mhow Road,3817,4 BHK,4,2,31,No,No,No,Non-Furnished,129.49
+Vaishali Nagar,3531,4 BHK,2,1,32,No,Yes,Yes,Semi-Furnished,201.91
+Rau,2020,3 BHK,3,4,29,Yes,No,No,Semi-Furnished,143.1
+LIG Colony,3668,4 BHK,3,1,37,No,No,No,Furnished,184.75
+Pipliyahana,4552,4 BHK,3,1,25,No,No,No,Furnished,252.57
+CAT Road,1572,3 BHK,4,3,13,No,No,No,Non-Furnished,68.67
+Nipania,3172,4 BHK,0,1,6,No,No,Yes,Furnished,226.7
+Mahalaxmi Nagar,671,1 BHK,2,4,31,Yes,No,Yes,Furnished,56.85
+Super Corridor,4385,5 BHK,1,0,41,Yes,No,No,Furnished,439.68
+Sudama Nagar,1918,3 BHK,2,3,26,Yes,Yes,Yes,Semi-Furnished,81.39
+Scheme No. 94,1264,2 BHK,2,3,32,Yes,Yes,Yes,Semi-Furnished,57.91
+Tilak Nagar,652,1 BHK,3,2,29,Yes,No,No,Semi-Furnished,36.15
+Khandwa Road,4377,4 BHK,1,0,36,Yes,Yes,Yes,Furnished,171.77
+Vaishali Nagar,4152,4 BHK,1,3,7,No,No,No,Semi-Furnished,273.85
+Silicon City,820,2 BHK,4,4,39,Yes,No,No,Furnished,23.37
+Mahalaxmi Nagar,886,2 BHK,1,2,38,Yes,Yes,No,Semi-Furnished,68.6
+Bhawarkuan,2802,3 BHK,4,4,23,Yes,Yes,Yes,Non-Furnished,131.78
+Pardesipura,4670,4 BHK,4,0,30,Yes,No,No,Semi-Furnished,184.13
+Rajendra Nagar,4953,4 BHK,4,1,31,Yes,No,No,Furnished,193.09
+Mahu Naka,4404,4 BHK,3,0,4,Yes,No,No,Semi-Furnished,241.49
+Mahalaxmi Nagar,2179,3 BHK,2,3,22,Yes,No,Yes,Semi-Furnished,197.4
