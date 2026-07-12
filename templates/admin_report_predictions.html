@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Input Summary Report — HousePriceAI{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 84px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <a href="{{ url_for('admin_dashboard') }}" class="footer-link small d-inline-block mb-3" style="color: var(--verdigris);">
+          <i class="bi bi-arrow-left me-1"></i>Back to dashboard
+        </a>
+
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 reveal is-visible">
+          <div>
+            <div class="form-eyebrow mb-1">Report</div>
+            <h1 class="h4 fw-bold mb-0" style="font-family: var(--font-display);">Input / prediction summary</h1>
+            <p class="text-muted small mt-2 mb-0">{{ totals['n'] }} requests logged &middot; {{ totals['total_rows'] }} properties scored in total.</p>
+          </div>
+          <form method="POST" action="{{ url_for('report_predictions_clear') }}"
+                onsubmit="return confirm('Clear all logged prediction requests? This cannot be undone.');">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() if csrf_token else '' }}">
+            <button type="submit" class="btn btn-outline-secondary px-3">
+              <i class="bi bi-trash3 me-1"></i>Clear log
+            </button>
+          </form>
+        </div>
+
+        <div class="card elevated border-0 p-4 p-md-5 reveal is-visible">
+          <div class="table-responsive">
+            <table class="table ledger-table align-middle mb-0">
+              <thead>
+                <tr><th>When (UTC)</th><th>Source</th><th>Locality</th><th>Area</th><th>Rows</th><th>Predicted</th></tr>
+              </thead>
+              <tbody>
+                {% for e in entries %}
+                <tr>
+                  <td class="text-mono">{{ e['created_at'] }}</td>
+                  <td><span class="badge-locality">{{ e['source'] }}</span></td>
+                  <td>{{ e['location'] or '&mdash;'|safe }}</td>
+                  <td>{{ e['area'] if e['area'] is not none else '&mdash;'|safe }}</td>
+                  <td>{{ e['row_count'] }}</td>
+                  <td class="text-mono">&#8377;{{ e['predicted_price']|inr }}</td>
+                </tr>
+                {% else %}
+                <tr><td colspan="6" class="text-muted text-center py-4">No predictions logged yet.</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
