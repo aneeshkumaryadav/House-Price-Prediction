@@ -11,31 +11,45 @@
           <div class="form-eyebrow mb-2">Model &amp; data</div>
           <h1 class="h4 fw-bold mb-3" style="font-family: var(--font-display);">Dataset &amp; model</h1>
           <p class="text-muted mb-4">
-            The model is trained on {{ "{:,}".format(stats.rows) }} residential listings across
-            {{ stats.localities }} Indore localities, with area, room counts, parking, furnishing,
-            and road/market proximity as inputs. Observed prices range from
-            &#8377;{{ stats.price_min|inr }} to &#8377;{{ stats.price_max|inr }}.
+            The model is trained on <strong>{{ "{:,}".format(stats.rows) }}</strong> residential listings across
+            <strong>{{ stats.localities }}</strong> Indore localities, with area, BHK, floor, balconies, 
+            property age, parking, furnishing, market proximity, and road access as inputs. 
+            Observed prices range from &#8377;{{ stats.price_min|inr }} to &#8377;{{ stats.price_max|inr }}.
           </p>
 
           <div class="row g-4 mb-4">
             <div class="col-sm-4">
-              <div class="form-eyebrow" style="font-size:.7rem;">Rows</div>
+              <div class="form-eyebrow" style="font-size:.7rem;">Total Rows</div>
               <div class="text-mono fs-4">{{ "{:,}".format(stats.rows) }}</div>
             </div>
             <div class="col-sm-4">
-              <div class="form-eyebrow" style="font-size:.7rem;">Avg. price</div>
+              <div class="form-eyebrow" style="font-size:.7rem;">Average Price</div>
               <div class="text-mono fs-4">&#8377;{{ stats.price_mean|lakh_crore }}</div>
             </div>
             <div class="col-sm-4">
-              <div class="form-eyebrow" style="font-size:.7rem;">Avg. area</div>
+              <div class="form-eyebrow" style="font-size:.7rem;">Average Area</div>
               <div class="text-mono fs-4">{{ "{:,}".format(stats.area_mean) }} sqft</div>
             </div>
           </div>
 
+          <div class="row g-4 mb-4">
+            <div class="col-sm-6">
+              <div class="form-eyebrow" style="font-size:.7rem;">Price Range</div>
+              <div class="text-mono">&#8377;{{ stats.price_min|inr }} — &#8377;{{ stats.price_max|inr }}</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-eyebrow" style="font-size:.7rem;">Total Localities</div>
+              <div class="text-mono">{{ stats.localities }} unique locations</div>
+            </div>
+          </div>
+
           <div class="d-flex flex-wrap gap-2 mb-4">
-            {% for loc in locations %}
+            {% for loc in locations[:15] %}
             <span class="badge-locality">{{ loc }}</span>
             {% endfor %}
+            {% if locations|length > 15 %}
+            <span class="badge-locality">+{{ locations|length - 15 }} more</span>
+            {% endif %}
           </div>
 
           <div class="d-flex flex-wrap gap-2">
@@ -49,24 +63,135 @@
         </div>
 
         <div class="card border-0 p-4 p-md-5 reveal is-visible">
-          <div class="form-eyebrow mb-3">Sample rows</div>
+          <div class="form-eyebrow mb-3">Sample rows from dataset</div>
           <div class="table-responsive">
             <table class="table ledger-table align-middle mb-0">
               <thead>
                 <tr>
-                  <th>Area</th><th>Beds</th><th>Baths</th><th>Stories</th>
-                  <th>Parking</th><th>Furnishing</th><th>Locality</th><th>Price</th>
+                  <th>Location</th>
+                  <th>Area</th>
+                  <th>BHK</th>
+                  <th>Floor</th>
+                  <th>Balconies</th>
+                  <th>Property Age</th>
+                  <th>Parking</th>
+                  <th>Furnishing</th>
+                  <th>Price (Lakhs)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>3065</td><td>4</td><td>2</td><td>3</td><td>2</td><td>furnished</td><td>Vijay Nagar</td><td class="text-mono">&#8377;{{ 13895000|inr }}</td></tr>
-                <tr><td>2450</td><td>4</td><td>4</td><td>4</td><td>3</td><td>furnished</td><td>Vijay Nagar</td><td class="text-mono">&#8377;{{ 12700000|inr }}</td></tr>
-                <tr><td>4699</td><td>4</td><td>2</td><td>2</td><td>3</td><td>furnished</td><td>Vijay Nagar</td><td class="text-mono">&#8377;{{ 18747000|inr }}</td></tr>
-                <tr><td>1342</td><td>4</td><td>1</td><td>2</td><td>2</td><td>furnished</td><td>Vijay Nagar</td><td class="text-mono">&#8377;{{ 8226000|inr }}</td></tr>
+                <tr>
+                  <td>Pipliyahana</td>
+                  <td>2347</td>
+                  <td>3</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>27</td>
+                  <td>Yes</td>
+                  <td>Non-Furnished</td>
+                  <td class="text-mono">&#8377;117.82 L</td>
+                </tr>
+                <tr>
+                  <td>Vijay Nagar</td>
+                  <td>1362</td>
+                  <td>3</td>
+                  <td>1</td>
+                  <td>3</td>
+                  <td>7</td>
+                  <td>No</td>
+                  <td>Semi-Furnished</td>
+                  <td class="text-mono">&#8377;168.54 L</td>
+                </tr>
+                <tr>
+                  <td>Palasia</td>
+                  <td>2753</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>0</td>
+                  <td>36</td>
+                  <td>No</td>
+                  <td>Non-Furnished</td>
+                  <td class="text-mono">&#8377;153.21 L</td>
+                </tr>
+                <tr>
+                  <td>Super Corridor</td>
+                  <td>3547</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>29</td>
+                  <td>Yes</td>
+                  <td>Semi-Furnished</td>
+                  <td class="text-mono">&#8377;386.51 L</td>
+                </tr>
+                <tr>
+                  <td>Scheme No. 54</td>
+                  <td>4240</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>10</td>
+                  <td>Yes</td>
+                  <td>Non-Furnished</td>
+                  <td class="text-mono">&#8377;461.73 L</td>
+                </tr>
               </tbody>
             </table>
           </div>
-          <p class="text-muted small mt-3 mb-0">Full sample available in the CSV download above — same columns your uploaded dataset should use.</p>
+          <p class="text-muted small mt-3 mb-0">
+            <i class="bi bi-info-circle me-1"></i>
+            Full dataset available in the Excel file — download the sample CSV above to see the complete column structure.
+          </p>
+        </div>
+
+        <div class="card border-0 p-4 p-md-5 mt-4 reveal is-visible">
+          <div class="form-eyebrow mb-3">Column descriptions</div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Location</span>
+                <span class="text-mono small">Property locality in Indore</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Area</span>
+                <span class="text-mono small">Total area in sq. ft.</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">BHK</span>
+                <span class="text-mono small">Number of bedrooms</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Floor</span>
+                <span class="text-mono small">Floor number (0 = ground)</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Balconies</span>
+                <span class="text-mono small">Number of balconies</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Property Age</span>
+                <span class="text-mono small">Age of property in years</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Parking</span>
+                <span class="text-mono small">Parking available (Yes/No)</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Near Market</span>
+                <span class="text-mono small">Close to market (Yes/No)</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Main Road</span>
+                <span class="text-mono small">Located on main road (Yes/No)</span>
+              </div>
+              <div class="d-flex justify-content-between border-bottom py-2">
+                <span class="text-muted">Furnishing</span>
+                <span class="text-mono small">Furnished / Semi-Furnished / Unfurnished</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
