@@ -21,17 +21,29 @@
           <div class="card elevated border-0 p-4 p-md-5 mb-4 reveal is-visible">
             <div class="form-eyebrow mb-2">Property survey</div>
             <h1 class="h4 fw-bold mb-1" style="font-family: var(--font-display);">Predict house price</h1>
-            <p class="text-muted small mb-4">Fields mirror the columns the model was trained on — area through locality.</p>
+            <p class="text-muted small mb-4">Fill in the property details to get an estimated market price.</p>
 
             <form method="POST" action="{{ url_for('predict') }}" id="predictForm" novalidate>
               <input type="hidden" name="csrf_token" value="{{ csrf_token() if csrf_token else '' }}">
 
               <div class="row g-4">
+                <!-- Area - Numeric Input -->
                 <div class="col-sm-6">
                   <label for="area" class="form-label">Area (sq. ft.)</label>
-                  <input type="number" class="form-control" id="area" name="area" min="100" required
-                         value="{{ request.form.area if request.form else '' }}">
+                  <input type="number" class="form-control" id="area" name="area" min="100" step="any" required
+                         value="{{ request.form.area if request.form else '' }}" placeholder="e.g., 1500">
+                  <small class="text-muted">Range: 350 - 5,000 sq. ft.</small>
                 </div>
+
+                <!-- Property Age - Numeric Input -->
+                <div class="col-sm-6">
+                  <label for="property_age" class="form-label">Property Age (years)</label>
+                  <input type="number" class="form-control" id="property_age" name="property_age" min="0" max="45" required
+                         value="{{ request.form.property_age if request.form else '' }}" placeholder="e.g., 10">
+                  <small class="text-muted">Range: 1 - 45 years</small>
+                </div>
+
+                <!-- Location - Dropdown -->
                 <div class="col-sm-6">
                   <label for="location" class="form-label">Locality</label>
                   <select class="form-select" id="location" name="location" required>
@@ -41,52 +53,81 @@
                     {% endfor %}
                   </select>
                 </div>
-                <div class="col-sm-4">
-                  <label for="bedrooms" class="form-label">Bedrooms</label>
-                  <input type="number" class="form-control" id="bedrooms" name="bedrooms" min="1" required
-                         value="{{ request.form.bedrooms if request.form else '' }}">
-                </div>
-                <div class="col-sm-4">
-                  <label for="bathrooms" class="form-label">Bathrooms</label>
-                  <input type="number" class="form-control" id="bathrooms" name="bathrooms" min="1" required
-                         value="{{ request.form.bathrooms if request.form else '' }}">
-                </div>
-                <div class="col-sm-4">
-                  <label for="stories" class="form-label">Stories</label>
-                  <input type="number" class="form-control" id="stories" name="stories" min="1" max="4" required
-                         value="{{ request.form.stories if request.form else '' }}">
-                </div>
+
+                <!-- BHK - Dropdown -->
                 <div class="col-sm-6">
-                  <label for="parking" class="form-label">Parking spots</label>
-                  <input type="number" class="form-control" id="parking" name="parking" min="0" max="4" required
-                         value="{{ request.form.parking if request.form else '' }}">
-                </div>
-                <div class="col-sm-6">
-                  <label for="furnishingstatus" class="form-label">Furnishing</label>
-                  <select class="form-select" id="furnishingstatus" name="furnishingstatus" required>
-                    <option value="" disabled {{ 'selected' if not (request.form and request.form.furnishingstatus) }}>Select furnishing</option>
-                    {% for f in furnishing %}
-                    <option value="{{ f }}" {{ 'selected' if request.form and request.form.furnishingstatus == f }}>{{ f|capitalize }}</option>
+                  <label for="bhk" class="form-label">BHK (Bedrooms)</label>
+                  <select class="form-select" id="bhk" name="bhk" required>
+                    <option value="" disabled {{ 'selected' if not (request.form and request.form.bhk) }}>Select BHK</option>
+                    {% for bhk in bhk_options %}
+                    <option value="{{ bhk }}" {{ 'selected' if request.form and request.form.bhk|int == bhk }}>{{ bhk }} BHK</option>
                     {% endfor %}
                   </select>
                 </div>
 
+                <!-- Floor - Dropdown -->
                 <div class="col-sm-6">
-                  <span class="form-label d-block">On main road</span>
-                  <div class="toggle-pair" role="radiogroup" aria-label="On main road">
-                    <input type="radio" name="mainroad" id="mainroadYes" value="yes" class="toggle-input" {{ 'checked' if not request.form or request.form.mainroad == 'yes' }}>
-                    <label for="mainroadYes" class="toggle-pill">Yes</label>
-                    <input type="radio" name="mainroad" id="mainroadNo" value="no" class="toggle-input" {{ 'checked' if request.form and request.form.mainroad == 'no' }}>
-                    <label for="mainroadNo" class="toggle-pill">No</label>
+                  <label for="floor" class="form-label">Floor</label>
+                  <select class="form-select" id="floor" name="floor" required>
+                    <option value="" disabled {{ 'selected' if not (request.form and request.form.floor) }}>Select floor</option>
+                    {% for floor in floor_options %}
+                    <option value="{{ floor }}" {{ 'selected' if request.form and request.form.floor|int == floor }}>{{ floor }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <!-- Balconies - Dropdown -->
+                <div class="col-sm-6">
+                  <label for="balconies" class="form-label">Balconies</label>
+                  <select class="form-select" id="balconies" name="balconies" required>
+                    <option value="" disabled {{ 'selected' if not (request.form and request.form.balconies) }}>Select balconies</option>
+                    {% for bal in balcony_options %}
+                    <option value="{{ bal }}" {{ 'selected' if request.form and request.form.balconies|int == bal }}>{{ bal }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <!-- Parking - Toggle (Yes/No) -->
+                <div class="col-sm-6">
+                  <span class="form-label d-block">Parking</span>
+                  <div class="toggle-pair" role="radiogroup" aria-label="Parking available">
+                    <input type="radio" name="parking" id="parkingYes" value="Yes" class="toggle-input" {{ 'checked' if not request.form or request.form.parking == 'Yes' }}>
+                    <label for="parkingYes" class="toggle-pill">Yes</label>
+                    <input type="radio" name="parking" id="parkingNo" value="No" class="toggle-input" {{ 'checked' if request.form and request.form.parking == 'No' }}>
+                    <label for="parkingNo" class="toggle-pill">No</label>
                   </div>
                 </div>
+
+                <!-- Furnishing - Dropdown -->
                 <div class="col-sm-6">
-                  <span class="form-label d-block">Near market</span>
+                  <label for="furnishing" class="form-label">Furnishing Status</label>
+                  <select class="form-select" id="furnishing" name="furnishing" required>
+                    <option value="" disabled {{ 'selected' if not (request.form and request.form.furnishing) }}>Select furnishing</option>
+                    {% for f in furnishing_options %}
+                    <option value="{{ f }}" {{ 'selected' if request.form and request.form.furnishing == f }}>{{ f }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <!-- Near Market - Toggle (Unchanged) -->
+                <div class="col-sm-6">
+                  <span class="form-label d-block">Near Market</span>
                   <div class="toggle-pair" role="radiogroup" aria-label="Near market">
-                    <input type="radio" name="near_market" id="marketYes" value="yes" class="toggle-input" {{ 'checked' if not request.form or request.form.near_market == 'yes' }}>
+                    <input type="radio" name="near_market" id="marketYes" value="Yes" class="toggle-input" {{ 'checked' if not request.form or request.form.near_market == 'Yes' }}>
                     <label for="marketYes" class="toggle-pill">Yes</label>
-                    <input type="radio" name="near_market" id="marketNo" value="no" class="toggle-input" {{ 'checked' if request.form and request.form.near_market == 'no' }}>
+                    <input type="radio" name="near_market" id="marketNo" value="No" class="toggle-input" {{ 'checked' if request.form and request.form.near_market == 'No' }}>
                     <label for="marketNo" class="toggle-pill">No</label>
+                  </div>
+                </div>
+
+                <!-- Main Road - Toggle (Unchanged) -->
+                <div class="col-sm-6">
+                  <span class="form-label d-block">On Main Road</span>
+                  <div class="toggle-pair" role="radiogroup" aria-label="On main road">
+                    <input type="radio" name="main_road" id="mainroadYes" value="Yes" class="toggle-input" {{ 'checked' if not request.form or request.form.main_road == 'Yes' }}>
+                    <label for="mainroadYes" class="toggle-pill">Yes</label>
+                    <input type="radio" name="main_road" id="mainroadNo" value="No" class="toggle-input" {{ 'checked' if request.form and request.form.main_road == 'No' }}>
+                    <label for="mainroadNo" class="toggle-pill">No</label>
                   </div>
                 </div>
               </div>
@@ -142,8 +183,7 @@
             <h1 class="h4 fw-bold mb-1" style="font-family: var(--font-display);">Upload a dataset</h1>
             <p class="text-muted small mb-4">
               CSV or Excel, one row per property. Required columns:
-              <code class="text-mono small">area, bedrooms, bathrooms, stories, parking, mainroad, furnishingstatus, location</code>
-              &mdash; <code class="text-mono small">near_market</code> is optional.
+              <code class="text-mono small">Location, Area, BHK, Floor, Balconies, Property Age, Parking, Near Market, Main Road, Furnishing</code>
             </p>
 
             <form method="POST" action="{{ url_for('predict_batch') }}" enctype="multipart/form-data" id="batchForm">
@@ -176,15 +216,16 @@
 {% block extra_scripts %}
 <script>
 document.getElementById('autofillBtn').addEventListener('click', function () {
-  document.getElementById('area').value = 3200;
-  document.getElementById('bedrooms').value = 3;
-  document.getElementById('bathrooms').value = 2;
-  document.getElementById('stories').value = 2;
-  document.getElementById('parking').value = 1;
-  document.getElementById('location').value = 'Palasia';
-  document.getElementById('furnishingstatus').value = 'semi-furnished';
-  document.getElementById('mainroadYes').checked = true;
+  document.getElementById('area').value = 2347;
+  document.getElementById('property_age').value = 27;
+  document.getElementById('location').value = 'Pipliyahana';
+  document.getElementById('bhk').value = '3';
+  document.getElementById('floor').value = '1';
+  document.getElementById('balconies').value = '2';
+  document.getElementById('parkingYes').checked = true;
+  document.getElementById('furnishing').value = 'Non-Furnished';
   document.getElementById('marketYes').checked = true;
+  document.getElementById('mainroadYes').checked = true;
 });
 
 /* Tabs */
