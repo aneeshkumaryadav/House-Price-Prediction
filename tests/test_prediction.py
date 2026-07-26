@@ -1,11 +1,17 @@
+import os
+import sys
 import unittest
 import pandas as pd
 import joblib
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from main import predict_with_model
+
 class TestHousePricePrediction(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Load the trained model once before all tests."""
-        cls.model = joblib.load("House-Price-Prediction\models\house_price_model.pkl")
+        cls.model = joblib.load(os.path.join(os.path.dirname(os.path.dirname(__file__)), "models", "house_price_model.pkl"))
     def test_model_loaded(self):
         """Test whether the model is loaded successfully."""
         self.assertIsNotNone(self.model)
@@ -89,6 +95,25 @@ class TestHousePricePrediction(unittest.TestCase):
         })
         prediction = self.model.predict(sample)
         self.assertIsInstance(prediction[0], (float, int))
+
+    def test_web_app_uses_model_prediction(self):
+        """The web app helper should return a positive price from the saved model."""
+        form = {
+            "area": 1600,
+            "property_age": 4,
+            "location": "Nipania",
+            "bhk": 3,
+            "floor": 2,
+            "balconies": 2,
+            "parking": "yes",
+            "furnishing": "Semi-Furnished",
+            "near_market": "yes",
+            "main_road": "yes",
+        }
+        price = predict_with_model(form)
+        self.assertIsNotNone(price)
+        self.assertGreater(price, 0)
+
     def test_invalid_missing_column(self):
         """Test prediction with a missing feature column."""
         sample = pd.DataFrame({
