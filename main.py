@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from functools import wraps
 from typing import Dict, Any, Optional, Tuple, List
 
+import joblib
 import pandas as pd
 from flask import (
     Flask, render_template, request, flash, redirect,
@@ -21,6 +22,9 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or os.urandom(24).hex()
     MAX_CONTENT_LENGTH = 8 * 1024 * 1024  # 8 MB
     ALLOWED_EXTENSIONS = {'csv', 'xlsx', 'xls'}
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATASET_DIR = os.path.join(BASE_DIR, 'dataset')
+    DATASET_FILE = os.path.join(DATASET_DIR, 'HousePricePredictionindore.xlsx')
     
     # Prediction parameters
     BASE_PRICE = 2_000_000
@@ -53,6 +57,40 @@ logger = logging.getLogger(__name__)
 os.makedirs(os.path.dirname(Config.DB_PATH), exist_ok=True)
 os.makedirs(Config.RESULTS_DIR, exist_ok=True)
 
+# Load saved model for web predictions
+MODEL_PATH = os.path.join(Config.BASE_DIR, 'models', 'house_price_model.pkl')
+MODEL = None
+try:
+    MODEL = joblib.load(MODEL_PATH)
+except Exception as exc:
+    logger.warning(f"Could not load model from {MODEL_PATH}: {exc}")
+
+
+def predict_with_model(form: Dict) -> Optional[float]:
+    """Use the saved ML model for house-price prediction when available."""
+    if MODEL is None:
+        return None
+
+    payload = pd.DataFrame([{
+        "Location": form.get("location"),
+        "Area": form.get("area"),
+        "BHK": form.get("bhk"),
+        "Floor": form.get("floor"),
+        "Balconies": form.get("balconies"),
+        "Property Age": form.get("property_age"),
+        "Parking": form.get("parking"),
+        "Near Market": form.get("near_market"),
+        "Main Road": form.get("main_road"),
+        "Furnishing": form.get("furnishing"),
+    }])
+
+    try:
+        prediction = MODEL.predict(payload)
+        return float(prediction[0])
+    except Exception as exc:
+        logger.warning(f"Model prediction failed: {exc}")
+        return None
+
 # =====================================================================
 # Data loading with caching
 # =====================================================================
@@ -62,7 +100,7 @@ from functools import lru_cache
 def load_excel_data():
     """Load unique values from Excel with caching"""
     try:
-        df = pd.read_excel('HousePricePredictionindore.xlsx')
+        df = pd.read_excel(Config.DATASET_FILE)
         furnishing_values = ['Furnished', 'Semi-Furnished', 'Unfurnished']
         
         return {
@@ -95,7 +133,7 @@ BALCONY_OPTIONS = EXCEL_DATA['balcony_options']
 
 # Reference stats
 try:
-    df = pd.read_excel('HousePricePredictionindore.xlsx')
+    df = pd.read_excel(Config.DATASET_FILE)
     DATASET_STATS = {
         "rows": len(df),
         "columns": len(df.columns),
@@ -457,7 +495,8 @@ def validate_house_fields(data: Dict) -> Tuple[Dict, Optional[str]]:
 
 def build_prediction(form: Dict) -> Dict:
     """Build prediction with feature importance analysis"""
-    price = calculate_price(**form)
+    model_price = predict_with_model(form)
+    price = model_price if model_price is not None else calculate_price(**form)
     
     # Calculate feature impacts for explanation
     impacts = [
@@ -587,7 +626,9 @@ def predict_batch():
         if error:
             bad_rows.append({"row": row.to_dict(), "error": error})
             return None
-        return calculate_price(**clean)
+
+        model_price = predict_with_model(clean)
+        return model_price if model_price is not None else calculate_price(**clean)
 
     df["predicted_price"] = df.apply(process_row, axis=1)
     valid = df.dropna(subset=["predicted_price"])
