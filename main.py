@@ -3,12 +3,14 @@ import csv
 import sqlite3
 import uuid
 import logging
+import warnings
 from datetime import datetime, timezone
 from functools import wraps
 from typing import Dict, Any, Optional, Tuple, List
 
 import joblib
 import pandas as pd
+from sklearn.exceptions import InconsistentVersionWarning
 from flask import (
     Flask, render_template, request, flash, redirect,
     url_for, send_from_directory, abort, session, g
@@ -48,10 +50,14 @@ app.config.from_object(Config)
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.ERROR,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# Suppress known sklearn compatibility warnings when loading the saved model
+warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
+warnings.filterwarnings("ignore", message="Trying to unpickle estimator.*")
 
 # Ensure directories exist
 os.makedirs(os.path.dirname(Config.DB_PATH), exist_ok=True)
@@ -949,4 +955,4 @@ def internal_server_error(e):
 init_db()
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=False, use_reloader=False, host="0.0.0.0", port=5000)
