@@ -145,8 +145,7 @@
           {% if prediction is defined and prediction %}
           <div class="card result-card border-0 p-4 p-md-5 reveal is-visible">
             <div class="result-eyebrow mb-2"><i class="bi bi-check-circle-fill me-1"></i>Prediction result</div>
-            <div class="predicted-price mb-1">&#8377;{{ prediction.price|inr }}</div>
-            <p class="small mb-0" style="color: rgba(255,255,255,0.6);">&#8776; &#8377;{{ prediction.price|lakh_crore }} &middot; estimated market value</p>
+            <div class="predicted-price mb-1">&#8377;{{ prediction.price|inr }} Lakhs</div>
 
             <div class="confidence-ruler"
                  data-low="{{ prediction.low }}" data-high="{{ prediction.high }}" data-price="{{ prediction.price }}">
